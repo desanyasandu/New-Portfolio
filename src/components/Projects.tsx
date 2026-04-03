@@ -172,6 +172,65 @@ const Projects: React.FC = () => {
                 <ProjectCard project={project} />
               </motion.div>
             ))}
+            {/* GitHub Tile */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: projects.length * 0.05, duration: 0.4 }}
+              className="interactive"
+            >
+              <div 
+                className="glass" 
+                style={{ 
+                  borderRadius: '24px', 
+                  padding: '24px', 
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  height: '480px',
+                  textAlign: 'center',
+                  border: '2px dashed var(--border-light)',
+                  background: 'rgba(255,255,255,0.01)'
+                }}
+              >
+                <div style={{ 
+                  width: '80px', 
+                  height: '80px', 
+                  borderRadius: '50%', 
+                  background: 'rgba(255,255,255,0.05)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '24px'
+                }}>
+                  <GithubIcon />
+                </div>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '16px', maxWidth: '280px' }}>
+                  Visit My GitHub for <span className="text-gradient">All Projects</span>
+                </h3>
+                <p style={{ color: 'rgba(255,255,255,0.5)', marginBottom: '32px', fontSize: '0.9rem' }}>
+                  Explore the full list of repositories and contributions.
+                </p>
+                <a 
+                  href={portfolioData.socials.github} 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="interactive glass" 
+                  style={{ 
+                    padding: '12px 32px', 
+                    borderRadius: '50px', 
+                    color: '#fff', 
+                    textDecoration: 'none', 
+                    fontWeight: 600,
+                    border: '1px solid var(--accent-cyan)'
+                  }}
+                >
+                  View All Projects
+                </a>
+              </div>
+            </motion.div>
           </AnimatePresence>
         </div>
         
