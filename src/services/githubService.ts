@@ -1,4 +1,4 @@
-import { Project } from "../types/portfolio";
+import type { Project } from "../types/portfolio";
 
 const GITHUB_USERNAME = "desanyasandu";
 
