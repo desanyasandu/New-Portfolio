@@ -9,178 +9,202 @@ const Hero: React.FC = () => {
       display: 'flex', 
       alignItems: 'center', 
       justifyContent: 'center',
-      padding: '100px 2rem 50px 2rem'
+      padding: '120px 2rem 80px 2rem',
+      position: 'relative'
     }}>
       <div className="container" style={{ 
         display: 'grid', 
-        gridTemplateColumns: '1.2fr 0.8fr', 
-        gap: '4rem', 
+        gridTemplateColumns: 'minmax(0, 1.2fr) minmax(0, 0.8fr)', 
+        gap: '6rem', 
         alignItems: 'center' 
       }}>
         <motion.div 
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             style={{ 
-              fontSize: '1.1rem', 
-              color: 'var(--accent-cyan)', 
-              fontWeight: 600, 
-              letterSpacing: '2px', 
-              marginBottom: '1rem',
-              textTransform: 'uppercase'
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '10px',
+              padding: '8px 16px',
+              borderRadius: '100px',
+              background: 'rgba(99, 102, 241, 0.1)',
+              border: '1px solid rgba(99, 102, 241, 0.2)',
+              marginBottom: '2rem'
             }}
           >
-            Hi there, I'm
-          </motion.p>
+            <span style={{ 
+              width: '8px', 
+              height: '8px', 
+              borderRadius: '50%', 
+              background: 'var(--accent-secondary)',
+              boxShadow: '0 0 10px var(--accent-secondary)'
+            }}></span>
+            <span style={{ 
+              fontSize: '0.85rem', 
+              color: 'var(--accent-secondary)', 
+              fontWeight: 600, 
+              letterSpacing: '1px', 
+              textTransform: 'uppercase'
+            }}>
+              Available for new projects
+            </span>
+          </motion.div>
+
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
             style={{ 
-              fontSize: '4.5rem', 
-              fontWeight: 700, 
-              lineHeight: 1.1, 
+              fontSize: 'clamp(3rem, 8vw, 5.5rem)', 
+              fontWeight: 800, 
+              lineHeight: 1, 
               marginBottom: '1.5rem', 
-              letterSpacing: '-2px'
+              letterSpacing: '-0.04em'
             }}
           >
             {portfolioData.name.split(' ')[0]} <br />
-            <span className="text-gradient">{portfolioData.name.split(' ')[1]}</span>
+            <span className="text-gradient">{portfolioData.name.split(' ').slice(1).join(' ')}</span>
           </motion.h1>
+
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
             style={{ 
-              fontSize: '1.8rem', 
-              color: 'rgba(255,255,255,0.7)', 
-              fontWeight: 400, 
-              marginBottom: '2rem' 
+              fontSize: 'clamp(1.2rem, 3vw, 2rem)', 
+              color: 'rgba(255,255,255,0.8)', 
+              fontWeight: 500, 
+              marginBottom: '2rem',
+              letterSpacing: '-0.02em'
             }}
           >
-            I build <span style={{ color: '#fff', fontWeight: 600 }}>efficient</span> software solutions.
+            Crafting <span style={{ color: '#fff', fontWeight: 600 }}>seamless</span> digital experiences.
           </motion.h2>
+
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
             style={{ 
-              fontSize: '1.1rem', 
+              fontSize: '1.15rem', 
               color: 'rgba(255,255,255,0.5)', 
-              maxWidth: '500px', 
-              lineHeight: 1.6,
+              maxWidth: '540px', 
+              lineHeight: 1.8,
               marginBottom: '3rem'
             }}
           >
-            {portfolioData.about}
+            I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products.
           </motion.p>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-            style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', alignItems: 'center' }}
           >
-            <a href="#projects" className="interactive glass" style={{ 
-              padding: '1rem 2.5rem', 
-              borderRadius: '50px', 
+            <a href="#projects" className="interactive" style={{ 
+              padding: '1.2rem 3rem', 
+              borderRadius: '16px', 
               textDecoration: 'none', 
-              color: '#fff', 
-              fontWeight: 600,
+              color: '#000', 
+              background: '#fff',
+              fontWeight: 700,
               fontSize: '1rem',
-              transition: 'transform 0.3s'
+              boxShadow: '0 10px 20px rgba(255,255,255,0.1)'
             }}>
-              View My Work
+              View Projects
             </a>
             
-            <div style={{ display: 'flex', gap: '0.8rem' }}>
+            <div style={{ display: 'flex', gap: '1.2rem' }}>
               <a href={portfolioData.socials.github} target="_blank" rel="noreferrer" className="interactive glass" style={{
-                width: '48px',
-                height: '48px',
-                borderRadius: '50%',
+                width: '56px',
+                height: '56px',
+                borderRadius: '16px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: '#fff',
                 transition: 'all 0.3s'
               }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
               </a>
               <a href={portfolioData.socials.linkedin} target="_blank" rel="noreferrer" className="interactive glass" style={{
-                width: '48px',
-                height: '48px',
-                borderRadius: '50%',
+                width: '56px',
+                height: '56px',
+                borderRadius: '16px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: '#fff',
                 transition: 'all 0.3s'
               }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-              </a>
-              <a href={`mailto:${portfolioData.socials.email}`} className="interactive glass" style={{
-                width: '48px',
-                height: '48px',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#fff',
-                transition: 'all 0.3s'
-              }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
               </a>
             </div>
           </motion.div>
         </motion.div>
 
         <motion.div 
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="interactive"
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           style={{ position: 'relative' }}
         >
-          <div className="glass" style={{
-            width: '380px',
-            height: '480px',
-            borderRadius: '40px',
+          <div style={{
+            position: 'relative',
+            zIndex: 1,
+            borderRadius: '48px',
             overflow: 'hidden',
-            padding: '12px',
-            position: 'relative'
+            boxShadow: '0 40px 80px rgba(0,0,0,0.5)',
+            border: '1px solid rgba(255,255,255,0.1)'
           }}>
              <img 
                src={portfolioData.profileImage} 
                alt={portfolioData.name} 
                style={{ 
                  width: '100%', 
-                 height: '100%', 
-                 objectFit: 'cover', 
-                 borderRadius: '30px' 
+                 height: 'auto', 
+                 display: 'block',
+                 filter: 'grayscale(20%) contrast(110%)'
                }} 
              />
              <div style={{
                position: 'absolute',
                inset: 0,
-               background: 'linear-gradient(to bottom, transparent 60%, rgba(5,5,10,0.8))'
+               background: 'linear-gradient(to bottom, transparent 50%, rgba(2,2,5,0.8))'
              }}></div>
           </div>
-          {/* Decorative Glow */}
+          
+          {/* Decorative Elements */}
           <div style={{
             position: 'absolute',
-            top: '-20px',
-            right: '-20px',
-            width: '100px',
-            height: '100px',
-            background: 'var(--accent-cyan)',
+            top: '-40px',
+            right: '-40px',
+            width: '200px',
+            height: '200px',
+            background: 'var(--accent-primary)',
             borderRadius: '50%',
-            filter: 'blur(40px)',
-            opacity: 0.4,
-            zIndex: -1
+            filter: 'blur(80px)',
+            opacity: 0.2,
+            zIndex: 0
+          }}></div>
+          <div style={{
+            position: 'absolute',
+            bottom: '-40px',
+            left: '-40px',
+            width: '200px',
+            height: '200px',
+            background: 'var(--accent-secondary)',
+            borderRadius: '50%',
+            filter: 'blur(80px)',
+            opacity: 0.2,
+            zIndex: 0
           }}></div>
         </motion.div>
       </div>

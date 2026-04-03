@@ -16,33 +16,35 @@ const MailIcon = ({ size }: { size: number }) => (
 const Footer: React.FC = () => {
   return (
     <footer id="contact" style={{ 
-      padding: '120px 2rem 60px 2rem', 
-      textAlign: 'center', 
-      background: 'rgba(5,5,10,0.5)', 
-      backdropFilter: 'blur(20px)',
-      marginTop: '120px'
+      padding: '160px 0 80px 0', 
+      background: 'rgba(2,2,5,0.4)', 
+      backdropFilter: 'blur(40px)',
+      borderTop: '1px solid rgba(255,255,255,0.05)',
+      marginTop: '160px'
     }}>
       <div className="container">
-        <h2 style={{ fontSize: '3.5rem', fontWeight: 700, marginBottom: '24px' }}>
-          Let's Build <span className="text-gradient">Something Great</span>
-        </h2>
-        <p style={{ color: 'rgba(255,255,255,0.5)', maxWidth: '500px', margin: '0 auto 48px auto', fontSize: '1.1rem' }}>
-          Currently seeking new opportunities to collaborate on innovative projects. My inbox is always open.
-        </p>
+        <div style={{ textAlign: 'center', marginBottom: '100px' }}>
+          <h2 style={{ fontSize: 'clamp(3rem, 6vw, 4.5rem)', fontWeight: 800, marginBottom: '24px', letterSpacing: '-0.04em' }}>
+            Let's <span className="text-gradient">Collaborate</span>
+          </h2>
+          <p style={{ color: 'rgba(255,255,255,0.5)', maxWidth: '580px', margin: '0 auto 48px auto', fontSize: '1.2rem', lineHeight: 1.6 }}>
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+          </p>
 
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '32px', marginBottom: '80px' }}>
-          <a href={`mailto:${portfolioData.socials.email}`} className="interactive glass" style={{
-            padding: '20px 40px',
-            borderRadius: '50px',
-            color: '#fff',
+          <a href={`mailto:${portfolioData.socials.email}`} className="interactive" style={{
+            padding: '1.2rem 3.5rem',
+            borderRadius: '16px',
+            color: '#000',
+            background: '#fff',
             textDecoration: 'none',
-            fontSize: '1.2rem',
-            fontWeight: 600,
-            display: 'flex',
+            fontSize: '1.1rem',
+            fontWeight: 700,
+            display: 'inline-flex',
             alignItems: 'center',
-            gap: '12px'
+            gap: '12px',
+            boxShadow: '0 10px 20px rgba(255,255,255,0.1)'
           }}>
-            Say Hello <MailIcon size={24} />
+            Send a Message <MailIcon size={20} />
           </a>
         </div>
 
@@ -51,14 +53,14 @@ const Footer: React.FC = () => {
           justifyContent: 'space-between', 
           alignItems: 'center', 
           paddingTop: '60px', 
-          borderTop: '1px solid var(--border-light)',
-          color: 'rgba(255,255,255,0.3)',
-          fontSize: '0.9rem'
+          borderTop: '1px solid rgba(255,255,255,0.05)',
+          color: 'rgba(255,255,255,0.4)',
+          fontSize: '0.95rem'
         }}>
           <div>© {new Date().getFullYear()} Desan Yasandu. Built with React & Vite.</div>
-          <div style={{ display: 'flex', gap: '20px' }}>
-            <a href={portfolioData.socials.github} className="interactive" style={{ color: 'inherit' }}><GithubIcon size={20} /></a>
-            <a href={portfolioData.socials.linkedin} className="interactive" style={{ color: 'inherit' }}><LinkedinIcon size={20} /></a>
+          <div style={{ display: 'flex', gap: '24px' }}>
+            <a href={portfolioData.socials.github} target="_blank" rel="noreferrer" className="interactive" style={{ color: 'inherit' }}><GithubIcon size={22} /></a>
+            <a href={portfolioData.socials.linkedin} target="_blank" rel="noreferrer" className="interactive" style={{ color: 'inherit' }}><LinkedinIcon size={22} /></a>
           </div>
         </div>
       </div>
@@ -67,3 +69,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+

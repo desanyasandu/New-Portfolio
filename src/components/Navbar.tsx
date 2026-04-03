@@ -16,38 +16,44 @@ const Navbar: React.FC = () => {
   return (
     <nav className="glass" style={{
       position: 'fixed',
-      top: '1rem',
+      top: '2rem',
       left: '50%',
       transform: 'translateX(-50%)',
       width: '90%',
-      maxWidth: '1000px',
-      height: '64px',
-      borderRadius: '32px',
+      maxWidth: '1200px',
+      height: '72px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      padding: '0 2rem',
+      padding: '0 2.5rem',
       zIndex: 1000,
+      border: '1px solid rgba(255,255,255,0.1)'
     }}>
-      <div className="logo" style={{ fontWeight: 700, fontSize: '1.2rem', letterSpacing: '-1px' }}>
+      <div className="logo" style={{ fontWeight: 800, fontSize: '1.5rem', letterSpacing: '-2px' }}>
         <span className="text-gradient">DY.</span>
       </div>
 
-      <div className="links" style={{ display: 'flex', gap: '2rem', fontSize: '0.9rem', fontWeight: 600 }}>
-        <a href="#hero" className="interactive">Home</a>
-        <a href="#projects" className="interactive">Projects</a>
-        <a href="#contact" className="interactive">Contact</a>
+      <div className="links" style={{ 
+        display: 'flex', 
+        gap: '2.5rem', 
+        fontSize: '0.9rem', 
+        fontWeight: 600,
+        color: 'rgba(255,255,255,0.7)' 
+      }}>
+        <a href="#hero" className="interactive" style={{ textDecoration: 'none', color: 'inherit' }}>Home</a>
+        <a href="#projects" className="interactive" style={{ textDecoration: 'none', color: 'inherit' }}>Projects</a>
+        <a href="#contact" className="interactive" style={{ textDecoration: 'none', color: 'inherit' }}>Contact</a>
       </div>
 
-      <div className="socials" style={{ display: 'flex', gap: '1rem' }}>
+      <div className="socials" style={{ display: 'flex', gap: '1.2rem' }}>
         <a href={portfolioData.socials.github} target="_blank" rel="noreferrer" className="interactive">
-          <GithubIcon size={20} color="var(--border-light)" />
+          <GithubIcon size={20} color="rgba(255,255,255,0.6)" />
         </a>
         <a href={portfolioData.socials.linkedin} target="_blank" rel="noreferrer" className="interactive">
-          <LinkedinIcon size={20} color="var(--border-light)" />
+          <LinkedinIcon size={20} color="rgba(255,255,255,0.6)" />
         </a>
         <a href={`mailto:${portfolioData.socials.email}`} className="interactive">
-          <MailIcon size={20} color="var(--border-light)" />
+          <MailIcon size={20} color="rgba(255,255,255,0.6)" />
         </a>
       </div>
     </nav>
@@ -55,3 +61,4 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
