@@ -162,23 +162,98 @@ const Hero: React.FC = () => {
             borderRadius: '48px',
             overflow: 'hidden',
             boxShadow: '0 40px 80px rgba(0,0,0,0.5)',
-            border: '1px solid rgba(255,255,255,0.1)'
+            border: '1px solid rgba(255,255,255,0.1)',
+            background: '#000',
+            aspectRatio: '16/10'
           }}>
-             <img 
-               src={portfolioData.profileImage} 
-               alt={portfolioData.name} 
+             {/* Video Header Label */}
+             <div style={{
+               position: 'absolute',
+               top: '24px',
+               left: '24px',
+               zIndex: 3,
+               background: 'rgba(0,0,0,0.5)',
+               backdropFilter: 'blur(8px)',
+               padding: '6px 14px',
+               borderRadius: '100px',
+               border: '1px solid rgba(255,255,255,0.1)',
+               display: 'flex',
+               alignItems: 'center',
+               gap: '8px'
+             }}>
+                <span style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>Featured</span>
+                <span style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'rgba(255,255,255,0.3)' }}></span>
+                <span style={{ fontSize: '0.7rem', color: '#fff', fontWeight: 600 }}>Demo V1.0</span>
+             </div>
+
+             <video 
+               autoPlay 
+               muted 
+               loop 
+               playsInline
                style={{ 
                  width: '100%', 
-                 height: 'auto', 
+                 height: '100%', 
+                 objectFit: 'cover',
                  display: 'block',
-                 filter: 'grayscale(20%) contrast(110%)'
+                 opacity: 0.8
                }} 
-             />
+             >
+               <source src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-9210-large.mp4" type="video/mp4" />
+               Your browser does not support the video tag.
+             </video>
+             
+             {/* Scanline Effect */}
              <div style={{
                position: 'absolute',
                inset: 0,
-               background: 'linear-gradient(to bottom, transparent 50%, rgba(2,2,5,0.8))'
+               background: 'linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))',
+               backgroundSize: '100% 2px, 3px 100%',
+               pointerEvents: 'none',
+               zIndex: 2,
+               opacity: 0.4
              }}></div>
+
+             {/* Dynamic Video Overlay */}
+             <div style={{
+               position: 'absolute',
+               inset: 0,
+               background: 'linear-gradient(to bottom, transparent 60%, rgba(2,2,5,0.9))',
+               display: 'flex',
+               flexDirection: 'column',
+               justifyContent: 'flex-end',
+               padding: '2rem',
+               pointerEvents: 'none'
+             }}>
+                <div style={{ 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  gap: '12px',
+                  marginBottom: '0.5rem'
+                }}>
+                  <div style={{ 
+                    width: '12px', 
+                    height: '12px', 
+                    borderRadius: '50%', 
+                    background: '#ff4b2b',
+                    boxShadow: '0 0 10px #ff4b2b',
+                    animation: 'pulse 2s infinite'
+                  }}></div>
+                  <span style={{ 
+                    fontSize: '0.75rem', 
+                    fontWeight: 700, 
+                    color: '#fff', 
+                    textTransform: 'uppercase', 
+                    letterSpacing: '2px' 
+                  }}>Live Demo</span>
+                </div>
+                <h3 style={{ fontSize: '1.2rem', fontWeight: 600, color: '#fff', margin: 0 }}>
+                  {portfolioData.projects[0].title}
+                </h3>
+                <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', margin: '4px 0 0 0' }}>
+                  Best Project Showcase
+                </p>
+             </div>
           </div>
           
           {/* Decorative Elements */}
