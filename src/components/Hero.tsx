@@ -23,6 +23,33 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            style={{
+              width: '100px',
+              height: '100px',
+              borderRadius: '32px',
+              overflow: 'hidden',
+              border: '2px solid rgba(255, 255, 255, 0.1)',
+              marginBottom: '2rem',
+              boxShadow: '0 20px 40px rgba(0, 0, 0, 0.4)',
+              background: 'var(--bg-surface)',
+              position: 'relative'
+            }}
+          >
+            <img 
+              src={portfolioData.profileImage} 
+              alt={portfolioData.name} 
+              style={{ 
+                width: '100%', 
+                height: '100%', 
+                objectFit: 'cover' 
+              }} 
+            />
+          </motion.div>
+
           <motion.div 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
