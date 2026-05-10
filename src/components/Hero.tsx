@@ -23,32 +23,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-            style={{
-              width: '100px',
-              height: '100px',
-              borderRadius: '32px',
-              overflow: 'hidden',
-              border: '2px solid rgba(255, 255, 255, 0.1)',
-              marginBottom: '2rem',
-              boxShadow: '0 20px 40px rgba(0, 0, 0, 0.4)',
-              background: 'var(--bg-surface)',
-              position: 'relative'
-            }}
-          >
-            <img 
-              src={portfolioData.profileImage} 
-              alt={portfolioData.name} 
-              style={{ 
-                width: '100%', 
-                height: '100%', 
-                objectFit: 'cover' 
-              }} 
-            />
-          </motion.div>
+
 
           <motion.div 
             initial={{ opacity: 0, y: 10 }}
@@ -181,36 +156,63 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          style={{ position: 'relative' }}
+          style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '500px' }}
         >
-          <div style={{
-            position: 'relative',
-            zIndex: 1,
-            borderRadius: '48px',
-            overflow: 'hidden',
-            boxShadow: '0 40px 80px rgba(0,0,0,0.5)',
-            border: '1px solid rgba(255,255,255,0.1)',
-            background: '#000',
-            aspectRatio: '16/10'
-          }}>
+          {/* Main Picture Floating */}
+          <motion.div
+            animate={{ y: [0, -15, 0] }}
+            transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
+            style={{
+              position: 'relative',
+              zIndex: 10,
+              width: '85%',
+              maxWidth: '450px',
+              aspectRatio: '4/5',
+              borderRadius: '32px',
+              overflow: 'hidden',
+              boxShadow: '0 30px 60px rgba(0,0,0,0.6)',
+              border: '1px solid rgba(255,255,255,0.1)',
+            }}
+          >
+             <img src="/me.png" alt="Desan Yasandu" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </motion.div>
+
+          {/* Floating Video Demo Card (Overlapping) */}
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut', delay: 1 }}
+            style={{
+              position: 'absolute',
+              bottom: '-5%',
+              right: '-5%',
+              zIndex: 20,
+              width: '60%',
+              borderRadius: '24px',
+              overflow: 'hidden',
+              boxShadow: '0 40px 80px rgba(0,0,0,0.8)',
+              border: '1px solid rgba(255,255,255,0.15)',
+              background: '#000',
+              aspectRatio: '16/10'
+            }}
+          >
              {/* Video Header Label */}
              <div style={{
                position: 'absolute',
-               top: '24px',
-               left: '24px',
+               top: '16px',
+               left: '16px',
                zIndex: 3,
                background: 'rgba(0,0,0,0.5)',
                backdropFilter: 'blur(8px)',
-               padding: '6px 14px',
+               padding: '4px 10px',
                borderRadius: '100px',
                border: '1px solid rgba(255,255,255,0.1)',
                display: 'flex',
                alignItems: 'center',
-               gap: '8px'
+               gap: '6px'
              }}>
-                <span style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>Featured</span>
-                <span style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'rgba(255,255,255,0.3)' }}></span>
-                <span style={{ fontSize: '0.7rem', color: '#fff', fontWeight: 600 }}>Demo V1.0</span>
+                <span style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>Featured</span>
+                <span style={{ width: '3px', height: '3px', borderRadius: '50%', background: 'rgba(255,255,255,0.3)' }}></span>
+                <span style={{ fontSize: '0.6rem', color: '#fff', fontWeight: 600 }}>Demo V1.0</span>
              </div>
 
              <video 
@@ -227,7 +229,6 @@ const Hero: React.FC = () => {
                }} 
              >
                <source src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-9210-large.mp4" type="video/mp4" />
-               Your browser does not support the video tag.
              </video>
              
              {/* Scanline Effect */}
@@ -245,49 +246,46 @@ const Hero: React.FC = () => {
              <div style={{
                position: 'absolute',
                inset: 0,
-               background: 'linear-gradient(to bottom, transparent 60%, rgba(2,2,5,0.9))',
+               background: 'linear-gradient(to bottom, transparent 40%, rgba(2,2,5,0.95))',
                display: 'flex',
                flexDirection: 'column',
                justifyContent: 'flex-end',
-               padding: '2rem',
+               padding: '1.2rem',
                pointerEvents: 'none'
              }}>
                 <div style={{ 
                   display: 'flex', 
                   alignItems: 'center', 
-                  gap: '12px',
-                  marginBottom: '0.5rem'
+                  gap: '8px',
+                  marginBottom: '0.25rem'
                 }}>
                   <div style={{ 
-                    width: '12px', 
-                    height: '12px', 
+                    width: '8px', 
+                    height: '8px', 
                     borderRadius: '50%', 
                     background: '#ff4b2b',
                     boxShadow: '0 0 10px #ff4b2b',
                     animation: 'pulse 2s infinite'
                   }}></div>
                   <span style={{ 
-                    fontSize: '0.75rem', 
+                    fontSize: '0.65rem', 
                     fontWeight: 700, 
                     color: '#fff', 
                     textTransform: 'uppercase', 
-                    letterSpacing: '2px' 
+                    letterSpacing: '1px' 
                   }}>Live Demo</span>
                 </div>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 600, color: '#fff', margin: 0 }}>
+                <h3 style={{ fontSize: '0.9rem', fontWeight: 600, color: '#fff', margin: 0 }}>
                   {portfolioData.projects[0].title}
                 </h3>
-                <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', margin: '4px 0 0 0' }}>
-                  Best Project Showcase
-                </p>
              </div>
-          </div>
+          </motion.div>
           
           {/* Decorative Elements */}
           <div style={{
             position: 'absolute',
-            top: '-40px',
-            right: '-40px',
+            top: '-20px',
+            right: '-20px',
             width: '200px',
             height: '200px',
             background: 'var(--accent-primary)',
@@ -298,8 +296,8 @@ const Hero: React.FC = () => {
           }}></div>
           <div style={{
             position: 'absolute',
-            bottom: '-40px',
-            left: '-40px',
+            bottom: '-20px',
+            left: '-20px',
             width: '200px',
             height: '200px',
             background: 'var(--accent-secondary)',
