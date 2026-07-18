@@ -1,11 +1,12 @@
 import type { PortfolioData } from "../types/portfolio";
+import profileImg from "../assets/profile.jpg";
 
 export const portfolioData: PortfolioData = {
   name: "Desan Yasandu",
   role: "Full-stack Developer",
   tagline: "Software Engineer | Creative Thinker | Problem Solver",
   about: "A dedicated software engineering student with a strong passion for coding, algorithms, and building efficient software solutions. My journey spans from system optimization scripts to full-stack microservices, always with a focus on clean, scalable code.",
-  profileImage: "https://avatars.githubusercontent.com/u/261121169?v=4",
+  profileImage: profileImg,
   projects: [
     {
       id: "1",
