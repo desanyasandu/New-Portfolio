@@ -1,5 +1,6 @@
 import type { PortfolioData } from "../types/portfolio";
 import profileImg from "../assets/profile.jpg";
+import greenDairyErpImg from "../assets/green-dairy-erp.png";
 
 export const portfolioData: PortfolioData = {
   name: "Desan Yasandu",
@@ -8,6 +9,33 @@ export const portfolioData: PortfolioData = {
   about: "A dedicated software engineering student with a strong passion for coding, algorithms, and building efficient software solutions. My journey spans from system optimization scripts to full-stack microservices, always with a focus on clean, scalable code.",
   profileImage: profileImg,
   projects: [
+    {
+      id: "7",
+      title: "Green Dairy ERP",
+      description: "A comprehensive enterprise resource planning platform for milk collection and processing businesses. Tracks real-time vehicle telemetry, BOM, collection ledgers, and multi-outlet stocks.",
+      tech: ["Next.js", "React", "Prisma", "PostgreSQL", "Tailwind CSS", "Recharts"],
+      link: "https://github.com/desanyasandu/green-dairy-erp",
+      github: "https://github.com/desanyasandu/green-dairy-erp",
+      image: greenDairyErpImg
+    },
+    {
+      id: "8",
+      title: "CourseConnect Enterprise",
+      description: "An enterprise learning management platform (LMS) with secure course creation, interactive forums, progress tracking, checkout integrations, and dual OracleDB & MongoDB synchronization.",
+      tech: ["Next.js", "React", "OracleDB", "MongoDB", "Tailwind CSS"],
+      link: "https://github.com/desanyasandu/courseconnect-enterprise",
+      github: "https://github.com/desanyasandu/courseconnect-enterprise",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2000"
+    },
+    {
+      id: "9",
+      title: "Raw Material & Inventory ERP",
+      description: "A warehouse and logistics tracking dashboard managing raw material shelf-lives, finished good batches, lorry inventory manifests, and driver petty cash ledger files.",
+      tech: ["Next.js", "React", "Prisma", "SQLite", "Tailwind CSS", "Recharts"],
+      link: "https://github.com/desanyasandu/ERP",
+      github: "https://github.com/desanyasandu/ERP",
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000"
+    },
     {
       id: "1",
       title: "Smart Browser History Manager",

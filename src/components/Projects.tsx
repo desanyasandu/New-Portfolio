@@ -124,16 +124,25 @@ const Projects: React.FC = () => {
   useEffect(() => {
     const loadProjects = async () => {
       const fetched = await fetchGithubProjects();
+      
+      let merged = [...portfolioData.projects];
+      
       if (fetched.length > 0) {
-        const merged = fetched.map(fetchedProj => {
-           const staticMatch = portfolioData.projects.find(p => p.github.toLowerCase() === fetchedProj.github.toLowerCase());
-           return {
-             ...fetchedProj,
-             image: staticMatch?.image || fetchedProj.image
-           };
+        fetched.forEach(fetchedProj => {
+          const index = merged.findIndex(p => p.github.toLowerCase() === fetchedProj.github.toLowerCase());
+          if (index !== -1) {
+            merged[index] = {
+              ...merged[index],
+              link: fetchedProj.link || merged[index].link,
+              github: fetchedProj.github || merged[index].github
+            };
+          } else {
+            merged.push(fetchedProj);
+          }
         });
-        setProjects(merged);
       }
+      
+      setProjects(merged);
       setLoading(false);
     };
     loadProjects();

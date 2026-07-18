@@ -11,15 +11,15 @@ interface TimelineItem {
 
 const education: TimelineItem[] = [
   {
-    year: '2024 - Present',
-    title: 'BSc (Hons) in Software Engineering',
-    subtitle: 'Coventry University (at NIBM)',
+    year: 'Feb 2026 - ongoing',
+    title: 'HND in Software Engineering',
+    subtitle: 'NIBM',
     description: 'Pursuing higher education specializing in advanced software architectures, system designs, APIs, and modern development methodology.'
   },
   {
-    year: '2022 - 2024',
-    title: 'Higher National Diploma in Software Engineering',
-    subtitle: 'National Institute of Business Management (NIBM)',
+    year: 'Jan 2025 - Jan 2026',
+    title: 'Diploma in Software Engineering',
+    subtitle: 'NIBM',
     description: 'Graduated with deep knowledge in programming algorithms, object-oriented concepts (Java), web programming, and databases.'
   }
 ];
