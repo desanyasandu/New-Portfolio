@@ -1,5 +1,4 @@
 import type { PortfolioData } from "../types/portfolio";
-import profileImg from "../assets/profile.jpg";
 import greenDairyErpImg from "../assets/green-dairy-erp.png";
 
 export const portfolioData: PortfolioData = {
@@ -7,7 +6,7 @@ export const portfolioData: PortfolioData = {
   role: "Full-stack Developer",
   tagline: "Software Engineer | Creative Thinker | Problem Solver",
   about: "A dedicated software engineering student with a strong passion for coding, algorithms, and building efficient software solutions. My journey spans from system optimization scripts to full-stack microservices, always with a focus on clean, scalable code.",
-  profileImage: profileImg,
+  profileImage: "/me.png",
   projects: [
     {
       id: "7",

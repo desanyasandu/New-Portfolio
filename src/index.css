@@ -169,6 +169,20 @@ h1, h2, h3, h4 {
   animation: blink 0.9s step-end infinite;
 }
 
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 10px #ff4b2b;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+    box-shadow: 0 0 20px #ff4b2b, 0 0 30px #ff4b2b;
+  }
+}
+
+
 /* Section Container Layout */
 section {
   padding: 120px 0;

@@ -98,6 +98,40 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
+            {/* Available for new projects pill */}
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              style={{ 
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                padding: '8px 16px',
+                borderRadius: '100px',
+                background: 'rgba(99, 102, 241, 0.1)',
+                border: '1px solid rgba(99, 102, 241, 0.2)',
+                marginBottom: '2rem'
+              }}
+            >
+              <span style={{ 
+                width: '8px', 
+                height: '8px', 
+                borderRadius: '50%', 
+                background: 'var(--accent-secondary)',
+                boxShadow: '0 0 10px var(--accent-secondary)'
+              }}></span>
+              <span style={{ 
+                fontSize: '0.85rem', 
+                color: 'var(--accent-secondary)', 
+                fontWeight: 600, 
+                letterSpacing: '1px', 
+                textTransform: 'uppercase'
+              }}>
+                Available for new projects
+              </span>
+            </motion.div>
+
             <h1
               style={{
                 fontSize: 'clamp(2.8rem, 6vw, 4.5rem)',
@@ -234,76 +268,161 @@ const Hero: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Right Column: Profile Picture Ring */}
-          <motion.div
+          {/* Right Column: Floating picture & Demo video */}
+          <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            style={{ display: 'flex', justifyContent: 'center', position: 'relative' }}
+            style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '500px' }}
           >
-            <div
+            {/* Main Picture Floating */}
+            <motion.div
+              animate={{ y: [0, -15, 0] }}
+              transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
               style={{
                 position: 'relative',
-                width: '320px',
-                height: '420px',
-                borderRadius: '40px',
+                zIndex: 10,
+                width: '85%',
+                maxWidth: '450px',
+                aspectRatio: '4/5',
+                borderRadius: '32px',
                 overflow: 'hidden',
-                boxShadow: '0 40px 80px rgba(0,0,0,0.6)',
-                border: '1px solid rgba(255,255,255,0.08)',
-                background: '#03040b'
+                boxShadow: '0 30px 60px rgba(0,0,0,0.6)',
+                border: '1px solid rgba(255,255,255,0.1)',
               }}
             >
-              <img
-                src={portfolioData.profileImage}
-                alt={portfolioData.name}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  display: 'block'
-                }}
-              />
+               <img src={portfolioData.profileImage} alt={portfolioData.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </motion.div>
 
-              {/* Gradient Bottom Overlay */}
-              <div
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'linear-gradient(to bottom, transparent 65%, #03040b 100%)',
-                  pointerEvents: 'none'
-                }}
-              />
-            </div>
-
-            {/* Glowing Ring Backdrops */}
-            <div
+            {/* Floating Video Demo Card (Overlapping) */}
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut', delay: 1 }}
               style={{
                 position: 'absolute',
-                top: '-30px',
-                right: '-30px',
-                width: '160px',
-                height: '160px',
-                background: 'var(--accent-primary)',
-                borderRadius: '50%',
-                filter: 'blur(70px)',
-                opacity: 0.2,
-                zIndex: -1
+                bottom: '-5%',
+                right: '-5%',
+                zIndex: 20,
+                width: '60%',
+                borderRadius: '24px',
+                overflow: 'hidden',
+                boxShadow: '0 40px 80px rgba(0,0,0,0.8)',
+                border: '1px solid rgba(255,255,255,0.15)',
+                background: '#000',
+                aspectRatio: '16/10'
               }}
-            />
-            <div
-              style={{
-                position: 'absolute',
-                bottom: '-30px',
-                left: '-30px',
-                width: '160px',
-                height: '160px',
-                background: 'var(--accent-secondary)',
-                borderRadius: '50%',
-                filter: 'blur(70px)',
-                opacity: 0.2,
-                zIndex: -1
-              }}
-            />
+            >
+               {/* Video Header Label */}
+               <div style={{
+                 position: 'absolute',
+                 top: '16px',
+                 left: '16px',
+                 zIndex: 3,
+                 background: 'rgba(0,0,0,0.5)',
+                 backdropFilter: 'blur(8px)',
+                 padding: '4px 10px',
+                 borderRadius: '100px',
+                 border: '1px solid rgba(255,255,255,0.1)',
+                 display: 'flex',
+                 alignItems: 'center',
+                 gap: '6px'
+               }}>
+                  <span style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>Featured</span>
+                  <span style={{ width: '3px', height: '3px', borderRadius: '50%', background: 'rgba(255,255,255,0.3)' }}></span>
+                  <span style={{ fontSize: '0.6rem', color: '#fff', fontWeight: 600 }}>Demo V1.0</span>
+               </div>
+
+               <video 
+                 autoPlay 
+                 muted 
+                 loop 
+                 playsInline
+                 style={{ 
+                   width: '100%', 
+                   height: '100%', 
+                   objectFit: 'cover',
+                   display: 'block',
+                   opacity: 0.8
+                 }} 
+               >
+                  <source src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-9210-large.mp4" type="video/mp4" />
+               </video>
+               
+               {/* Scanline Effect */}
+               <div style={{
+                 position: 'absolute',
+                 inset: 0,
+                 background: 'linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))',
+                 backgroundSize: '100% 2px, 3px 100%',
+                 pointerEvents: 'none',
+                 zIndex: 2,
+                 opacity: 0.4
+               }}></div>
+
+               {/* Dynamic Video Overlay */}
+               <div style={{
+                 position: 'absolute',
+                 inset: 0,
+                 background: 'linear-gradient(to bottom, transparent 40%, rgba(2,2,5,0.95))',
+                 display: 'flex',
+                 flexDirection: 'column',
+                 justifyContent: 'flex-end',
+                 padding: '1.2rem',
+                 pointerEvents: 'none'
+               }}>
+                  <div style={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    gap: '8px',
+                    marginBottom: '0.25rem'
+                  }}>
+                    <div style={{ 
+                      width: '8px', 
+                      height: '8px', 
+                      borderRadius: '50%', 
+                      background: '#ff4b2b',
+                      boxShadow: '0 0 10px #ff4b2b',
+                      animation: 'pulse 2s infinite'
+                    }}></div>
+                    <span style={{ 
+                      fontSize: '0.65rem', 
+                      fontWeight: 700, 
+                      color: '#fff', 
+                      textTransform: 'uppercase', 
+                      letterSpacing: '1px' 
+                    }}>Live Demo</span>
+                  </div>
+                  <h3 style={{ fontSize: '0.9rem', fontWeight: 600, color: '#fff', margin: 0 }}>
+                    {portfolioData.projects[0].title}
+                  </h3>
+               </div>
+            </motion.div>
+            
+            {/* Decorative Elements */}
+            <div style={{
+              position: 'absolute',
+              top: '-20px',
+              right: '-20px',
+              width: '200px',
+              height: '200px',
+              background: 'var(--accent-primary)',
+              borderRadius: '50%',
+              filter: 'blur(80px)',
+              opacity: 0.2,
+              zIndex: 0
+            }}></div>
+            <div style={{
+              position: 'absolute',
+              bottom: '-20px',
+              left: '-20px',
+              width: '200px',
+              height: '200px',
+              background: 'var(--accent-secondary)',
+              borderRadius: '50%',
+              filter: 'blur(80px)',
+              opacity: 0.2,
+              zIndex: 0
+            }}></div>
           </motion.div>
         </div>
       </div>
