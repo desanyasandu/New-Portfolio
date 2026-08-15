@@ -1,5 +1,6 @@
 import type { PortfolioData } from "../types/portfolio";
 import greenDairyErpImg from "../assets/green-dairy-erp.png";
+import nutrivisionImg from "../assets/nutrivision-ai.jpg";
 
 export const portfolioData: PortfolioData = {
   name: "Desan Yasandu",
@@ -11,13 +12,24 @@ export const portfolioData: PortfolioData = {
   aboutImage: "/about-me.png",
   projects: [
     {
+      id: "nutrivision-ai",
+      title: "Nutrivision AI - Dietary Health Assistant",
+      description: "An AI-powered mobile nutrition platform built with Flutter. Features real-time computer vision food scanning, calorie & macro tracking, disease risk estimation, digital health twin analytics, and interactive AI dietary coaching.",
+      tech: ["Flutter", "Dart", "Computer Vision", "AI Agents", "Provider", "REST APIs"],
+      link: "https://github.com/desanyasandu",
+      github: "https://github.com/desanyasandu",
+      image: nutrivisionImg
+    },
+    {
       id: "7",
-      title: "Green Dairy ERP",
-      description: "A comprehensive enterprise resource planning platform for milk collection and processing businesses. Tracks real-time vehicle telemetry, BOM, collection ledgers, and multi-outlet stocks.",
+      title: "Green Dairy Distribution & Production Management System",
+      description: "Designed and engineered an enterprise ERP platform managing real-time vehicle telemetry, raw material BOMs, milk collection ledgers, automated batch processing, and multi-outlet supply chain distribution.",
       tech: ["Next.js", "React", "Prisma", "PostgreSQL", "Tailwind CSS", "Recharts"],
       link: "https://github.com/desanyasandu/green-dairy-erp",
       github: "https://github.com/desanyasandu/green-dairy-erp",
-      image: greenDairyErpImg
+      image: greenDairyErpImg,
+      featured: true,
+      badge: "Featured Large-Scale System"
     },
     {
       id: "8",
@@ -93,6 +105,7 @@ export const portfolioData: PortfolioData = {
     }
   ],
   skills: [
+    { name: "Flutter & Dart", category: "Frontend" },
     { name: "Next.js", category: "Frontend" },
     { name: "React.js", category: "Frontend" },
     { name: "TypeScript", category: "Frontend" },

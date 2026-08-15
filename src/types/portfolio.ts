@@ -6,6 +6,8 @@ export interface Project {
   link: string;
   github: string;
   image: string;
+  featured?: boolean;
+  badge?: string;
 }
 
 export interface Skill {

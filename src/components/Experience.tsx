@@ -26,6 +26,12 @@ const education: TimelineItem[] = [
 
 const projectsExperience: TimelineItem[] = [
   {
+    year: '2025 - 2026',
+    title: 'Green Dairy Distribution & Production Management System',
+    subtitle: 'Featured Large-Scale Enterprise System | Full-Stack Architect',
+    description: 'Designed and engineered an enterprise ERP platform managing real-time vehicle telemetry, raw material BOMs, milk collection ledgers, automated batch processing, and multi-outlet supply chain distribution.'
+  },
+  {
     year: '2024',
     title: 'Smart Browser History Manager',
     subtitle: 'Open Source Lead Developer',

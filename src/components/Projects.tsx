@@ -12,6 +12,10 @@ const ExternalLinkIcon = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
 );
 
+const StarIcon = ({ size = 14 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+);
+
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <motion.div 
@@ -30,6 +34,31 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         position: 'relative',
         background: '#111'
       }}>
+        {project.badge && (
+          <div style={{
+            position: 'absolute',
+            top: '16px',
+            left: '16px',
+            zIndex: 3,
+            background: 'rgba(8, 3, 18, 0.85)',
+            backdropFilter: 'blur(10px)',
+            border: '1px solid rgba(255, 193, 7, 0.4)',
+            padding: '6px 14px',
+            borderRadius: '100px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+            color: '#ffc107',
+            fontSize: '0.75rem',
+            fontWeight: 700,
+            letterSpacing: '0.5px',
+            textTransform: 'uppercase',
+            boxShadow: '0 4px 20px rgba(255, 193, 7, 0.25)'
+          }}>
+            <StarIcon size={12} />
+            <span>{project.badge}</span>
+          </div>
+        )}
         <img 
           src={project.image} 
           alt={project.title} 
