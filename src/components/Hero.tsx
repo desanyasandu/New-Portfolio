@@ -188,40 +188,14 @@ const Hero: React.FC = () => {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem', alignItems: 'center', marginBottom: '2.5rem' }}>
               <a
                 href="#projects"
-                className="interactive"
-                style={{
-                  padding: '14px 28px',
-                  borderRadius: '16px',
-                  textDecoration: 'none',
-                  color: '#000',
-                  background: '#fff',
-                  fontWeight: 700,
-                  fontSize: '0.95rem',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  boxShadow: '0 10px 20px rgba(255,255,255,0.06)'
-                }}
+                className="btn interactive"
               >
                 View Projects <ArrowRight size={16} />
               </a>
 
               <a
                 href="#contact"
-                className="interactive"
-                style={{
-                  padding: '14px 28px',
-                  borderRadius: '16px',
-                  textDecoration: 'none',
-                  color: 'var(--accent-secondary)',
-                  border: '1px solid rgba(34, 211, 238, 0.4)',
-                  background: 'rgba(34, 211, 238, 0.02)',
-                  fontWeight: 700,
-                  fontSize: '0.95rem',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px'
-                }}
+                className="btn interactive"
               >
                 Contact Me <Mail size={16} />
               </a>

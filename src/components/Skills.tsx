@@ -8,6 +8,7 @@ interface SkillItem {
 }
 
 const skillsList: SkillItem[] = [
+  { name: 'Next.js', proficiency: 95, category: 'Frontend' },
   { name: 'React.js', proficiency: 95, category: 'Frontend' },
   { name: 'TypeScript', proficiency: 90, category: 'Frontend' },
   { name: 'JavaScript', proficiency: 95, category: 'Frontend' },

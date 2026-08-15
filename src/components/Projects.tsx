@@ -226,16 +226,7 @@ const Projects: React.FC = () => {
                   href={portfolioData.socials.github} 
                   target="_blank" 
                   rel="noreferrer" 
-                  className="interactive" 
-                  style={{ 
-                    padding: '1.2rem 2.5rem', 
-                    borderRadius: '16px', 
-                    color: '#fff', 
-                    textDecoration: 'none', 
-                    fontWeight: 700,
-                    background: 'rgba(255,255,255,0.05)',
-                    border: '1px solid rgba(255,255,255,0.1)'
-                  }}
+                  className="btn interactive" 
                 >
                   View My GitHub
                 </a>

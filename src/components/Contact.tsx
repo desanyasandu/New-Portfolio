@@ -209,22 +209,12 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="interactive"
+                className="btn interactive"
                 style={{
                   width: '100%',
-                  padding: '16px',
-                  borderRadius: '16px',
-                  border: 'none',
-                  background: submitSuccess ? '#10b981' : 'linear-gradient(to right, var(--accent-primary), var(--accent-secondary))',
-                  color: '#fff',
-                  fontWeight: 700,
-                  fontSize: '1rem',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '8px',
-                  boxShadow: '0 10px 20px rgba(99, 102, 241, 0.15)',
-                  cursor: isSubmitting ? 'not-allowed' : 'pointer'
+                  padding: '1em 1.5em',
+                  cursor: isSubmitting ? 'not-allowed' : 'pointer',
+                  background: submitSuccess ? '#10b981' : undefined
                 }}
               >
                 {isSubmitting ? (

@@ -93,6 +93,7 @@ export const portfolioData: PortfolioData = {
     }
   ],
   skills: [
+    { name: "Next.js", category: "Frontend" },
     { name: "React.js", category: "Frontend" },
     { name: "TypeScript", category: "Frontend" },
     { name: "JavaScript", category: "Frontend" },
