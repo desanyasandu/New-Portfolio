@@ -82,7 +82,7 @@ const About: React.FC = () => {
                 }}
               >
                 <img
-                  src={portfolioData.profileImage}
+                  src={portfolioData.aboutImage || portfolioData.profileImage}
                   alt={portfolioData.name}
                   style={{
                     width: '100%',

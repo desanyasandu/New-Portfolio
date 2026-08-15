@@ -19,6 +19,8 @@ export interface PortfolioData {
   tagline: string;
   about: string;
   profileImage: string;
+  heroImage?: string;
+  aboutImage?: string;
   projects: Project[];
   skills: Skill[];
   socials: {

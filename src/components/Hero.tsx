@@ -283,119 +283,19 @@ const Hero: React.FC = () => {
                 position: 'relative',
                 zIndex: 10,
                 width: '85%',
-                maxWidth: '450px',
-                aspectRatio: '4/5',
+                maxWidth: '420px',
+                aspectRatio: '1/1',
                 borderRadius: '32px',
                 overflow: 'hidden',
                 boxShadow: '0 30px 60px rgba(0,0,0,0.6)',
-                border: '1px solid rgba(255,255,255,0.1)',
+                border: '1px solid rgba(255,255,255,0.12)',
               }}
             >
-               <img src={portfolioData.profileImage} alt={portfolioData.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            </motion.div>
-
-            {/* Floating Video Demo Card (Overlapping) */}
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut', delay: 1 }}
-              style={{
-                position: 'absolute',
-                bottom: '-5%',
-                right: '-5%',
-                zIndex: 20,
-                width: '60%',
-                borderRadius: '24px',
-                overflow: 'hidden',
-                boxShadow: '0 40px 80px rgba(0,0,0,0.8)',
-                border: '1px solid rgba(255,255,255,0.15)',
-                background: '#000',
-                aspectRatio: '16/10'
-              }}
-            >
-               {/* Video Header Label */}
-               <div style={{
-                 position: 'absolute',
-                 top: '16px',
-                 left: '16px',
-                 zIndex: 3,
-                 background: 'rgba(0,0,0,0.5)',
-                 backdropFilter: 'blur(8px)',
-                 padding: '4px 10px',
-                 borderRadius: '100px',
-                 border: '1px solid rgba(255,255,255,0.1)',
-                 display: 'flex',
-                 alignItems: 'center',
-                 gap: '6px'
-               }}>
-                  <span style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>Featured</span>
-                  <span style={{ width: '3px', height: '3px', borderRadius: '50%', background: 'rgba(255,255,255,0.3)' }}></span>
-                  <span style={{ fontSize: '0.6rem', color: '#fff', fontWeight: 600 }}>Demo V1.0</span>
-               </div>
-
-               <video 
-                 autoPlay 
-                 muted 
-                 loop 
-                 playsInline
-                 style={{ 
-                   width: '100%', 
-                   height: '100%', 
-                   objectFit: 'cover',
-                   display: 'block',
-                   opacity: 0.8
-                 }} 
-               >
-                  <source src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-9210-large.mp4" type="video/mp4" />
-               </video>
-               
-               {/* Scanline Effect */}
-               <div style={{
-                 position: 'absolute',
-                 inset: 0,
-                 background: 'linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))',
-                 backgroundSize: '100% 2px, 3px 100%',
-                 pointerEvents: 'none',
-                 zIndex: 2,
-                 opacity: 0.4
-               }}></div>
-
-               {/* Dynamic Video Overlay */}
-               <div style={{
-                 position: 'absolute',
-                 inset: 0,
-                 background: 'linear-gradient(to bottom, transparent 40%, rgba(2,2,5,0.95))',
-                 display: 'flex',
-                 flexDirection: 'column',
-                 justifyContent: 'flex-end',
-                 padding: '1.2rem',
-                 pointerEvents: 'none'
-               }}>
-                  <div style={{ 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    gap: '8px',
-                    marginBottom: '0.25rem'
-                  }}>
-                    <div style={{ 
-                      width: '8px', 
-                      height: '8px', 
-                      borderRadius: '50%', 
-                      background: '#ff4b2b',
-                      boxShadow: '0 0 10px #ff4b2b',
-                      animation: 'pulse 2s infinite'
-                    }}></div>
-                    <span style={{ 
-                      fontSize: '0.65rem', 
-                      fontWeight: 700, 
-                      color: '#fff', 
-                      textTransform: 'uppercase', 
-                      letterSpacing: '1px' 
-                    }}>Live Demo</span>
-                  </div>
-                  <h3 style={{ fontSize: '0.9rem', fontWeight: 600, color: '#fff', margin: 0 }}>
-                    {portfolioData.projects[0].title}
-                  </h3>
-               </div>
+               <img 
+                 src={portfolioData.heroImage || portfolioData.profileImage} 
+                 alt={portfolioData.name} 
+                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
+               />
             </motion.div>
             
             {/* Decorative Elements */}
