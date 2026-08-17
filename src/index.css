@@ -121,8 +121,8 @@ h1, h2, h3, h4 {
 
 /* Custom Cursor Refinement */
 @media (pointer: fine) {
-  body, a, button, input, textarea, select, [role="button"], .interactive {
-    cursor: none;
+  *, *::before, *::after {
+    cursor: none !important;
   }
 }
 

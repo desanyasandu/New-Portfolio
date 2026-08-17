@@ -223,7 +223,7 @@ const Cursor: React.FC<CursorDotTrailProps> = ({
         height: '100vh',
         display: 'block',
         pointerEvents: 'none',
-        zIndex: 9999,
+        zIndex: 99999,
       }}
     />,
     document.body
