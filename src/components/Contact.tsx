@@ -13,15 +13,25 @@ const Contact: React.FC = () => {
     if (!formData.name || !formData.email || !formData.message) return;
 
     setIsSubmitting(true);
-    // Simulate API request
+
+    const emailTo = portfolioData.socials.email || 'desanyasandu@gmail.com';
+    const emailSubject = encodeURIComponent(
+      formData.subject ? formData.subject : `Portfolio Message from ${formData.name}`
+    );
+    const emailBody = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+
+    const mailtoUrl = `mailto:${emailTo}?subject=${emailSubject}&body=${emailBody}`;
+
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitSuccess(true);
+      window.location.href = mailtoUrl;
       setFormData({ name: '', email: '', subject: '', message: '' });
 
-      // Reset success state after a few seconds
       setTimeout(() => setSubmitSuccess(false), 5000);
-    }, 1500);
+    }, 400);
   };
 
   return (
@@ -162,7 +172,6 @@ const Contact: React.FC = () => {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="John Doe"
                     className="form-input"
                   />
                 </div>
@@ -174,7 +183,6 @@ const Contact: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="john@example.com"
                     className="form-input"
                   />
                 </div>
@@ -187,7 +195,6 @@ const Contact: React.FC = () => {
                   id="subject"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  placeholder="Project Collaboration"
                   className="form-input"
                 />
               </div>
@@ -200,7 +207,6 @@ const Contact: React.FC = () => {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Hey, I'd love to chat about working together..."
                   className="form-textarea"
                   style={{ resize: 'none' }}
                 />
