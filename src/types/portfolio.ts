@@ -8,6 +8,7 @@ export interface Project {
   image: string;
   featured?: boolean;
   badge?: string;
+  highlights?: string[];
 }
 
 export interface Skill {

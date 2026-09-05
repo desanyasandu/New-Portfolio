@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
 import { fetchGithubProjects } from '../services/githubService';
 import type { Project } from '../types/portfolio';
+import { ExternalLink, Zap } from 'lucide-react';
 
 const GithubIcon = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
 );
-
 
 const StarIcon = ({ size = 14 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -16,11 +16,12 @@ const StarIcon = ({ size = 14 }: { size?: number }) => (
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <motion.div 
-      className="glass" 
+      className={`glass ${project.featured ? 'glow-card' : ''}`}
       style={{ 
         display: 'flex',
         flexDirection: 'column',
-        height: '520px',
+        minHeight: '560px',
+        height: '100%',
         overflow: 'hidden'
       }}
     >
@@ -70,48 +71,157 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         <div style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(to bottom, transparent 60%, rgba(2,2,5,0.9))'
+          background: 'linear-gradient(to bottom, transparent 55%, rgba(3,4,11,0.95))'
         }}></div>
       </div>
 
-      <div style={{ padding: '32px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+      <div style={{ padding: '28px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
         <h3 style={{ 
-          fontSize: '1.5rem', 
+          fontSize: '1.4rem', 
           fontWeight: 700, 
-          marginBottom: '12px', 
-          textTransform: 'capitalize',
-          letterSpacing: '-0.02em'
+          marginBottom: '10px', 
+          letterSpacing: '-0.02em',
+          color: '#fff'
         }}>
           {project.title}
         </h3>
         <p style={{ 
-          fontSize: '1rem', 
-          color: 'rgba(255,255,255,0.5)', 
-          lineHeight: 1.6, 
-          marginBottom: '24px',
-          flexGrow: 1,
-          overflow: 'hidden',
-          display: '-webkit-box',
-          WebkitLineClamp: 3,
-          WebkitBoxOrient: 'vertical'
+          fontSize: '0.95rem', 
+          color: 'rgba(255,255,255,0.6)', 
+          lineHeight: 1.55, 
+          marginBottom: project.highlights && project.highlights.length > 0 ? '16px' : '24px'
         }}>
           {project.description}
         </p>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: 'auto' }}>
-          {project.tech.map(t => (
-            <span key={t} style={{ 
-              fontSize: '0.75rem', 
-              padding: '6px 14px', 
-              borderRadius: '100px', 
-              background: 'rgba(255,255,255,0.05)', 
+        {/* Enterprise Engineering Highlights */}
+        {project.highlights && project.highlights.length > 0 && (
+          <div style={{
+            marginBottom: '20px',
+            padding: '12px 14px',
+            background: 'rgba(99, 102, 241, 0.05)',
+            borderRadius: '12px',
+            border: '1px solid rgba(99, 102, 241, 0.14)'
+          }}>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              fontSize: '0.72rem',
+              fontWeight: 700,
+              textTransform: 'uppercase',
+              letterSpacing: '0.8px',
               color: 'var(--accent-secondary)',
-              fontWeight: 600,
-              border: '1px solid rgba(255,255,255,0.05)'
+              marginBottom: '8px'
             }}>
-              {t}
-            </span>
-          ))}
+              <Zap size={13} style={{ color: 'var(--accent-secondary)' }} />
+              <span>Architecture & Engineering</span>
+            </div>
+            <ul style={{
+              listStyle: 'none',
+              padding: 0,
+              margin: 0,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '6px'
+            }}>
+              {project.highlights.map((h, idx) => (
+                <li key={idx} style={{
+                  fontSize: '0.8rem',
+                  color: 'rgba(255, 255, 255, 0.75)',
+                  lineHeight: 1.4,
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '8px'
+                }}>
+                  <span style={{
+                    color: 'var(--accent-primary)',
+                    marginTop: '2px',
+                    fontSize: '0.75rem',
+                    flexShrink: 0
+                  }}>▸</span>
+                  <span>{h}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Tech Tags and Direct Links */}
+        <div style={{ 
+          display: 'flex', 
+          justifyContent: 'space-between', 
+          alignItems: 'center', 
+          marginTop: 'auto',
+          paddingTop: '16px',
+          borderTop: '1px solid rgba(255, 255, 255, 0.05)',
+          gap: '12px',
+          flexWrap: 'wrap'
+        }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', flex: '1 1 auto' }}>
+            {project.tech.map(t => (
+              <span key={t} style={{ 
+                fontSize: '0.72rem', 
+                padding: '4px 10px', 
+                borderRadius: '100px', 
+                background: 'rgba(255,255,255,0.04)', 
+                color: 'var(--accent-secondary)',
+                fontWeight: 600,
+                border: '1px solid rgba(255,255,255,0.05)'
+              }}>
+                {t}
+              </span>
+            ))}
+          </div>
+
+          <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginLeft: 'auto', flexShrink: 0 }}>
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                title="View GitHub Repository"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '8px',
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  color: 'rgba(255, 255, 255, 0.75)',
+                  transition: 'all 0.2s ease'
+                }}
+                className="interactive"
+              >
+                <GithubIcon size={15} />
+              </a>
+            )}
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                title="Open Project"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '8px',
+                  background: 'rgba(99, 102, 241, 0.15)',
+                  border: '1px solid rgba(99, 102, 241, 0.3)',
+                  color: 'var(--accent-secondary)',
+                  transition: 'all 0.2s ease'
+                }}
+                className="interactive"
+              >
+                <ExternalLink size={14} />
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </motion.div>
@@ -199,7 +309,8 @@ const Projects: React.FC = () => {
                   flexDirection: 'column',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  height: '520px',
+                  minHeight: '560px',
+                  height: '100%',
                   textAlign: 'center',
                   padding: '48px',
                   borderStyle: 'dashed'

@@ -18,7 +18,12 @@ export const portfolioData: PortfolioData = {
       tech: ["Flutter", "Dart", "Computer Vision", "AI Agents", "Provider", "REST APIs"],
       link: "https://github.com/desanyasandu",
       github: "https://github.com/desanyasandu",
-      image: nutrivisionImg
+      image: nutrivisionImg,
+      highlights: [
+        "Secure Edge API proxy architecture with zero client-side secret key leaks",
+        "Local caching layer reducing recurring Vision AI inference calls by 40%",
+        "Strict input validation preventing malicious prompt & payload injections"
+      ]
     },
     {
       id: "7",
@@ -29,7 +34,12 @@ export const portfolioData: PortfolioData = {
       github: "https://github.com/desanyasandu/green-dairy-erp",
       image: greenDairyErpImg,
       featured: true,
-      badge: "Featured Large-Scale System"
+      badge: "Featured Large-Scale System",
+      highlights: [
+        "Strict runtime schema validation via Zod & zero raw SQL queries via Prisma ORM",
+        "PostgreSQL connection pooling preventing connection exhaustion under peak batch syncs",
+        "Multi-outlet data isolation and secure Role-Based Access Control (RBAC)"
+      ]
     },
     {
       id: "8",
@@ -38,7 +48,12 @@ export const portfolioData: PortfolioData = {
       tech: ["Next.js", "React", "OracleDB", "MongoDB", "Tailwind CSS"],
       link: "https://github.com/desanyasandu/courseconnect-enterprise",
       github: "https://github.com/desanyasandu/courseconnect-enterprise",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2000"
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2000",
+      highlights: [
+        "Dual OracleDB & MongoDB synchronization with idempotent write pipelines",
+        "IDOR & unauthorized resource protection via strict server-side session checks",
+        "Optimized indexed pagination keeping dashboard read latency under 80ms"
+      ]
     },
     {
       id: "9",
@@ -47,7 +62,11 @@ export const portfolioData: PortfolioData = {
       tech: ["Next.js", "React", "Prisma", "SQLite", "Tailwind CSS", "Recharts"],
       link: "https://github.com/desanyasandu/ERP",
       github: "https://github.com/desanyasandu/ERP",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000"
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000",
+      highlights: [
+        "ACID-compliant inventory transaction ledgers preventing double-allocation anomalies",
+        "Least-privilege database user permissions for audit and operational safety"
+      ]
     },
     {
       id: "1",
@@ -65,7 +84,11 @@ export const portfolioData: PortfolioData = {
       tech: ["TypeScript", "WebRTC", "Socket.io"],
       link: "https://github.com/desanyasandu/Zoom-Alternative",
       github: "https://github.com/desanyasandu/Zoom-Alternative",
-      image: "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=1974&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=1974&auto=format&fit=crop",
+      highlights: [
+        "Peer-to-peer WebRTC mesh signaling with room-scoped socket memory cleanup",
+        "Tokenized room handshakes preventing unauthorized cross-session joins"
+      ]
     },
     {
       id: "3",
@@ -83,7 +106,11 @@ export const portfolioData: PortfolioData = {
       tech: ["Java", "Spring Boot", "React", "REST API"],
       link: "https://github.com/desanyasandu/React-SpringBoot-MS",
       github: "https://github.com/desanyasandu/React-SpringBoot-MS",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
+      highlights: [
+        "Stateless JWT authentication with cross-service authorization boundaries",
+        "Strict DTO validation layer preventing broken object-level authorization (BOLA)"
+      ]
     },
     {
       id: "5",
