@@ -46,7 +46,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Enable smooth scrolling natively only when Lenis is not active */
+html:not(.lenis) {
   scroll-behavior: smooth;
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
 
 body {
@@ -164,6 +189,106 @@ h1, h2, h3, h4 {
     opacity: 0.7;
     box-shadow: 0 0 20px #ff4b2b, 0 0 30px #ff4b2b;
   }
+}
+
+/* GPU-Accelerated Hardware Keyframe Animations */
+@keyframes statusPulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(34, 211, 238, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0);
+  }
+}
+
+@keyframes floatGently {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+@keyframes shimmerSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes cardBorderGlow {
+  0%, 100% {
+    border-color: rgba(99, 102, 241, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(99, 102, 241, 0.1);
+  }
+  50% {
+    border-color: rgba(34, 211, 238, 0.45);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 30px rgba(34, 211, 238, 0.2);
+  }
+}
+
+@keyframes ambientPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale3d(1.06, 1.06, 1);
+  }
+}
+
+/* GPU Performance Utilities */
+.pulse-status {
+  animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  will-change: transform, box-shadow;
+}
+
+.float-slow {
+  animation: floatGently 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.glow-card {
+  animation: cardBorderGlow 4s ease-in-out infinite;
+  will-change: border-color, box-shadow;
+}
+
+.shimmer-badge {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-badge::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  animation: shimmerSlide 3s infinite;
+  will-change: transform;
+}
+
+.ambient-glow {
+  animation: ambientPulse 5s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 
@@ -428,16 +553,17 @@ section {
 }
 
 .loading-bar-background {
-  --height: 30px;
+  --height: 10px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding: 5px;
-  width: 200px;
+  padding: 2px;
+  width: 220px;
   height: var(--height);
-  background-color: #212121;
-  box-shadow: #0c0c0c -2px 2px 4px 0px inset;
-  border-radius: calc(var(--height) / 2);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  backdrop-filter: blur(8px);
 }
 
 .loading-bar {
@@ -445,18 +571,18 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  --height: 20px;
+  --height: 6px;
   width: 0%;
   height: var(--height);
   overflow: hidden;
-  background: rgb(222, 74, 15);
   background: linear-gradient(
-    0deg,
-    rgba(222, 74, 15, 1) 0%,
-    rgba(249, 199, 79, 1) 100%
+    90deg,
+    var(--accent-primary) 0%,
+    var(--accent-secondary) 100%
   );
-  border-radius: calc(var(--height) / 2);
-  animation: loading 4s ease-out infinite;
+  box-shadow: 0 0 14px var(--accent-secondary);
+  border-radius: 100px;
+  animation: loading 2.5s ease-out infinite;
 }
 
 .white-bars-container {

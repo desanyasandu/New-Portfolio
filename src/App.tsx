@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSmoothScroll } from './hooks/useSmoothScroll';
 import Cursor from './components/Cursor';
 import LoadingScreen from './components/LoadingScreen';
 import BackgroundParticles from './components/BackgroundParticles';
@@ -14,8 +15,10 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
+  useSmoothScroll();
+
   return (
-    <div style={{ position: 'relative', overflow: 'hidden' }}>
+    <div style={{ position: 'relative', width: '100%', overflowX: 'clip' }}>
       <Cursor />
       <LoadingScreen />
       <BackgroundParticles />

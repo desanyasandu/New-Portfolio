@@ -62,6 +62,7 @@ const Hero: React.FC = () => {
     >
       {/* Glow Blur Circles */}
       <div
+        className="ambient-glow"
         style={{
           position: 'absolute',
           top: '20%',
@@ -76,6 +77,7 @@ const Hero: React.FC = () => {
         }}
       />
       <div
+        className="ambient-glow"
         style={{
           position: 'absolute',
           bottom: '20%',
@@ -103,6 +105,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
+              className="shimmer-badge"
               style={{ 
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -114,13 +117,16 @@ const Hero: React.FC = () => {
                 marginBottom: '2rem'
               }}
             >
-              <span style={{ 
-                width: '8px', 
-                height: '8px', 
-                borderRadius: '50%', 
-                background: 'var(--accent-secondary)',
-                boxShadow: '0 0 10px var(--accent-secondary)'
-              }}></span>
+              <span 
+                className="pulse-status"
+                style={{ 
+                  width: '8px', 
+                  height: '8px', 
+                  borderRadius: '50%', 
+                  background: 'var(--accent-secondary)',
+                  display: 'inline-block'
+                }}
+              />
               <span style={{ 
                 fontSize: '0.85rem', 
                 color: 'var(--accent-secondary)', 
@@ -188,7 +194,7 @@ const Hero: React.FC = () => {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem', alignItems: 'center', marginBottom: '2.5rem' }}>
               <a
                 href="#projects"
-                className="btn interactive"
+                className="btn interactive glow-card shimmer-badge"
               >
                 View Projects <ArrowRight size={16} />
               </a>

@@ -32,9 +32,22 @@ const LoadingScreen: React.FC = () => {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="loading-screen"
         >
-          <div className="loader">
-            <div className="loading-text">
-              DY<span className="dot">.</span><span className="dot">.</span><span className="dot">.</span>
+          <div className="loader" style={{ position: 'relative' }}>
+            <div 
+              className="ambient-glow"
+              style={{
+                position: 'absolute',
+                width: '180px',
+                height: '180px',
+                background: 'rgba(99, 102, 241, 0.15)',
+                borderRadius: '50%',
+                filter: 'blur(50px)',
+                pointerEvents: 'none',
+                zIndex: -1
+              }}
+            />
+            <div className="loading-text" style={{ letterSpacing: '2px' }}>
+              DY<span className="dot text-gradient">.</span><span className="dot text-gradient">.</span><span className="dot text-gradient">.</span>
             </div>
             <div className="loading-bar-background">
               <div className="loading-bar">
