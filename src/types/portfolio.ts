@@ -9,6 +9,7 @@ export interface Project {
   featured?: boolean;
   badge?: string;
   highlights?: string[];
+  demoVideo?: string;
 }
 
 export interface Skill {

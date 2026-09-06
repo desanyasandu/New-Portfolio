@@ -792,4 +792,35 @@ section {
   }
 }
 
+/* Project Demo Pill Button */
+.project-demo-pill {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 4;
+  background: rgba(14, 18, 28, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 12px rgba(34, 211, 238, 0.2);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-demo-pill:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: rgba(22, 28, 45, 0.95);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6), 0 0 20px rgba(34, 211, 238, 0.45);
+}
+
+
 

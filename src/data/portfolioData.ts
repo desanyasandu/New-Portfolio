@@ -1,6 +1,7 @@
 import type { PortfolioData } from "../types/portfolio";
 import greenDairyErpImg from "../assets/green-dairy-erp.png";
 import nutrivisionImg from "../assets/nutrivision-ai.jpg";
+import ceylonStayImg from "../assets/ceylon-stay-nibm.png";
 
 export const portfolioData: PortfolioData = {
   name: "Desan Yasandu",
@@ -11,20 +12,6 @@ export const portfolioData: PortfolioData = {
   heroImage: "/hero-me.png",
   aboutImage: "/about-me.png",
   projects: [
-    {
-      id: "nutrivision-ai",
-      title: "Nutrivision AI - Dietary Health Assistant",
-      description: "An AI-powered mobile nutrition platform built with Flutter. Features real-time computer vision food scanning, calorie & macro tracking, disease risk estimation, digital health twin analytics, and interactive AI dietary coaching.",
-      tech: ["Flutter", "Dart", "Computer Vision", "AI Agents", "Provider", "REST APIs"],
-      link: "https://github.com/desanyasandu",
-      github: "https://github.com/desanyasandu",
-      image: nutrivisionImg,
-      highlights: [
-        "Secure Edge API proxy architecture with zero client-side secret key leaks",
-        "Local caching layer reducing recurring Vision AI inference calls by 40%",
-        "Strict input validation preventing malicious prompt & payload injections"
-      ]
-    },
     {
       id: "7",
       title: "Green Dairy Distribution & Production Management System",
@@ -39,6 +26,39 @@ export const portfolioData: PortfolioData = {
         "Strict runtime schema validation via Zod & zero raw SQL queries via Prisma ORM",
         "PostgreSQL connection pooling preventing connection exhaustion under peak batch syncs",
         "Multi-outlet data isolation and secure Role-Based Access Control (RBAC)"
+      ]
+    },
+    {
+      id: "ceylon-stay-nibm",
+      title: "Diploma in Software Engineering at NIBM Final Project",
+      description: "Built our 1st year final project with a strong DevOps focus. A real-world deployable accommodation booking platform engineered with microservice architecture, automated GitOps delivery, container orchestration, and computer vision AI.",
+      tech: ["React Vite", "Python FastAPI", "Kubernetes", "Docker", "RabbitMQ", "YOLOv11n", "ArgoCD", "PostgreSQL", "Redis", "WSO2"],
+      link: "https://www.linkedin.com/posts/kushan-randika-herath-5a3b39352_diploma-in-software-engineering-at-nibm-final-activity-7448927464082501632-AAzH",
+      github: "https://github.com/desanyasandu/CEYLON-STAY-FRONT-END",
+      image: ceylonStayImg,
+      featured: true,
+      badge: "Featured NIBM Final Project",
+      demoVideo: "https://www.linkedin.com/posts/kushan-randika-herath-5a3b39352_diploma-in-software-engineering-at-nibm-final-activity-7448927464082501632-AAzH?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViZecBKVFcRFuYpEjym_KrLSIqLuI6t0Y",
+      highlights: [
+        "Microservices Architecture: Vanilla K8s orchestration, Docker containers & MetalLB load balancing",
+        "AI & Computer Vision: YOLOv11n pre-trained vision model for object detection with MinIO S3 storage",
+        "GitOps & Delivery: Automated builds and continuous deployments via ArgoCD & Helm Charts on Ubuntu Server",
+        "API Governance & Security: WSO2 Asgardeo identity management & WSO2 Bijira API Gateway traffic lifecycle",
+        "Event Messaging & Data: RabbitMQ queue handling, Python FastAPI, Redis caching, and PostgreSQL database"
+      ]
+    },
+    {
+      id: "nutrivision-ai",
+      title: "Nutrivision AI - Dietary Health Assistant",
+      description: "An AI-powered mobile nutrition platform built with Flutter. Features real-time computer vision food scanning, calorie & macro tracking, disease risk estimation, digital health twin analytics, and interactive AI dietary coaching.",
+      tech: ["Flutter", "Dart", "Computer Vision", "AI Agents", "Provider", "REST APIs"],
+      link: "https://github.com/desanyasandu",
+      github: "https://github.com/desanyasandu",
+      image: nutrivisionImg,
+      highlights: [
+        "Secure Edge API proxy architecture with zero client-side secret key leaks",
+        "Local caching layer reducing recurring Vision AI inference calls by 40%",
+        "Strict input validation preventing malicious prompt & payload injections"
       ]
     },
     {
@@ -120,15 +140,6 @@ export const portfolioData: PortfolioData = {
       link: "https://github.com/desanyasandu/Library-API",
       github: "https://github.com/desanyasandu/Library-API",
       image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2090&auto=format&fit=crop"
-    },
-    {
-      id: "6",
-      title: "Ceylon Stay",
-      description: "Elegant hospitality and tourism platform focused on building seamless hotel booking experiences.",
-      tech: ["React", "CSS3", "JavaScript"],
-      link: "https://github.com/desanyasandu/CEYLON-STAY-FRONT-END",
-      github: "https://github.com/desanyasandu/CEYLON-STAY-FRONT-END",
-      image: "https://images.unsplash.com/photo-1455584730411-4f881b8ca75b?q=80&w=1974&auto=format&fit=crop"
     }
   ],
   skills: [
