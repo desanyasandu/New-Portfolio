@@ -98,10 +98,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         {project.highlights && project.highlights.length > 0 && (
           <div style={{
             marginBottom: '20px',
-            padding: '12px 14px',
-            background: 'rgba(99, 102, 241, 0.05)',
-            borderRadius: '12px',
-            border: '1px solid rgba(99, 102, 241, 0.14)'
+            padding: '14px 16px',
+            background: 'var(--bg-deep)',
+            borderRadius: '14px',
+            boxShadow: 'var(--neu-inset)',
+            border: '1px solid rgba(0, 0, 0, 0.4)'
           }}>
             <div style={{
               display: 'flex',
@@ -154,7 +155,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           alignItems: 'center', 
           marginTop: 'auto',
           paddingTop: '16px',
-          borderTop: '1px solid rgba(255, 255, 255, 0.05)',
+          borderTop: '1px solid var(--border-subtle)',
           gap: '12px',
           flexWrap: 'wrap'
         }}>
@@ -164,10 +165,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                 fontSize: '0.72rem', 
                 padding: '4px 10px', 
                 borderRadius: '100px', 
-                background: 'rgba(255,255,255,0.04)', 
+                background: 'var(--bg-deep)', 
                 color: 'var(--accent-secondary)',
-                fontWeight: 600,
-                border: '1px solid rgba(255,255,255,0.05)'
+                fontWeight: 600, 
+                boxShadow: 'var(--neu-inset)',
+                border: '1px solid rgba(0, 0, 0, 0.3)'
               }}>
                 {t}
               </span>
@@ -182,18 +184,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                 rel="noreferrer"
                 title="View GitHub Repository"
                 style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '8px',
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
-                  color: 'rgba(255, 255, 255, 0.75)',
-                  transition: 'all 0.2s ease'
+                  width: '34px',
+                  height: '34px',
+                  borderRadius: '10px'
                 }}
-                className="interactive"
+                className="neu-icon-btn interactive"
               >
                 <GithubIcon size={15} />
               </a>
@@ -205,20 +200,14 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                 rel="noreferrer"
                 title="Open Project"
                 style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '8px',
-                  background: 'rgba(99, 102, 241, 0.15)',
-                  border: '1px solid rgba(99, 102, 241, 0.3)',
-                  color: 'var(--accent-secondary)',
-                  transition: 'all 0.2s ease'
+                  width: '34px',
+                  height: '34px',
+                  borderRadius: '10px',
+                  color: 'var(--accent-secondary)'
                 }}
-                className="interactive"
+                className="neu-icon-btn interactive"
               >
-                <ExternalLink size={14} />
+                <ExternalLink size={15} />
               </a>
             )}
           </div>
@@ -319,12 +308,15 @@ const Projects: React.FC = () => {
                 <div style={{ 
                   width: '96px', 
                   height: '96px', 
-                  borderRadius: '32px', 
-                  background: 'rgba(255,255,255,0.03)',
+                  borderRadius: '28px', 
+                  background: 'var(--bg-deep)',
+                  boxShadow: 'var(--neu-inset)',
+                  border: '1px solid rgba(0, 0, 0, 0.4)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  marginBottom: '32px'
+                  marginBottom: '32px',
+                  color: 'var(--accent-secondary)'
                 }}>
                   <GithubIcon size={40} />
                 </div>

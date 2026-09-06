@@ -176,17 +176,13 @@ const Hero: React.FC = () => {
                 href={portfolioData.socials.github}
                 target="_blank"
                 rel="noreferrer"
-                className="interactive glass"
+                className="neu-icon-btn interactive"
                 style={{
-                  width: '46px',
-                  height: '46px',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'var(--text-secondary)',
-                  border: '1px solid rgba(255,255,255,0.04)'
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '14px'
                 }}
+                aria-label="GitHub Profile"
               >
                 <Github size={20} />
               </a>
@@ -194,17 +190,13 @@ const Hero: React.FC = () => {
                 href={portfolioData.socials.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="interactive glass"
+                className="neu-icon-btn interactive"
                 style={{
-                  width: '46px',
-                  height: '46px',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'var(--text-secondary)',
-                  border: '1px solid rgba(255,255,255,0.04)'
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '14px'
                 }}
+                aria-label="LinkedIn Profile"
               >
                 <Linkedin size={20} />
               </a>
@@ -230,8 +222,9 @@ const Hero: React.FC = () => {
                 aspectRatio: '1/1',
                 borderRadius: '32px',
                 overflow: 'hidden',
-                boxShadow: '0 30px 60px rgba(0,0,0,0.6)',
-                border: '1px solid rgba(255,255,255,0.12)',
+                boxShadow: 'var(--neu-hover)',
+                border: '2px solid var(--border-highlight)',
+                background: 'var(--bg-surface)'
               }}
             >
                <img 

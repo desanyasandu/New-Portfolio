@@ -108,8 +108,9 @@ const Contact: React.FC = () => {
                     width: '48px',
                     height: '48px',
                     borderRadius: '14px',
-                    background: 'rgba(255, 255, 255, 0.02)',
-                    border: '1px solid rgba(255, 255, 255, 0.06)',
+                    background: 'var(--bg-deep)',
+                    boxShadow: 'var(--neu-inset)',
+                    border: '1px solid rgba(0, 0, 0, 0.4)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -133,8 +134,9 @@ const Contact: React.FC = () => {
                     width: '48px',
                     height: '48px',
                     borderRadius: '14px',
-                    background: 'rgba(255, 255, 255, 0.02)',
-                    border: '1px solid rgba(255, 255, 255, 0.06)',
+                    background: 'var(--bg-deep)',
+                    boxShadow: 'var(--neu-inset)',
+                    border: '1px solid rgba(0, 0, 0, 0.4)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -160,7 +162,7 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="glass"
-            style={{ padding: '40px', borderRadius: '28px', border: '1px solid rgba(255, 255, 255, 0.04)' }}
+            style={{ padding: '40px', borderRadius: '28px' }}
           >
             <form onSubmit={handleSubmit}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '24px' }}>

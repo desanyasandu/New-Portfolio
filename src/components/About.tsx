@@ -68,8 +68,9 @@ const About: React.FC = () => {
               style={{
                 padding: '12px',
                 borderRadius: '32px',
-                boxShadow: '0 30px 60px rgba(0,0,0,0.6)',
-                border: '1px solid rgba(255,255,255,0.08)'
+                boxShadow: 'var(--neu-hover)',
+                border: '1px solid var(--border-highlight)',
+                background: 'var(--bg-surface)'
               }}
             >
               <div
@@ -77,7 +78,7 @@ const About: React.FC = () => {
                   aspectRatio: '1/1',
                   borderRadius: '24px',
                   overflow: 'hidden',
-                  background: 'rgba(255, 255, 255, 0.01)',
+                  background: 'var(--bg-deep)',
                   position: 'relative'
                 }}
               >
@@ -105,7 +106,7 @@ const About: React.FC = () => {
                 background: 'var(--accent-primary)',
                 borderRadius: '50%',
                 filter: 'blur(60px)',
-                opacity: 0.2,
+                opacity: 0.15,
                 zIndex: -1
               }}
             />
@@ -119,7 +120,7 @@ const About: React.FC = () => {
                 background: 'var(--accent-secondary)',
                 borderRadius: '50%',
                 filter: 'blur(60px)',
-                opacity: 0.2,
+                opacity: 0.15,
                 zIndex: -1
               }}
             />
@@ -171,10 +172,22 @@ const About: React.FC = () => {
                   borderRadius: '20px',
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '12px'
+                  gap: '16px'
                 }}
               >
-                <Award size={24} color="var(--accent-secondary)" />
+                <div style={{
+                  width: '44px',
+                  height: '44px',
+                  borderRadius: '12px',
+                  background: 'var(--bg-deep)',
+                  boxShadow: 'var(--neu-inset)',
+                  border: '1px solid rgba(0, 0, 0, 0.4)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <Award size={22} color="var(--accent-secondary)" />
+                </div>
                 <div>
                   <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#fff' }}>2+ Years</h4>
                   <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '4px' }}>
@@ -191,10 +204,22 @@ const About: React.FC = () => {
                   borderRadius: '20px',
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '12px'
+                  gap: '16px'
                 }}
               >
-                <Briefcase size={24} color="var(--accent-primary)" />
+                <div style={{
+                  width: '44px',
+                  height: '44px',
+                  borderRadius: '12px',
+                  background: 'var(--bg-deep)',
+                  boxShadow: 'var(--neu-inset)',
+                  border: '1px solid rgba(0, 0, 0, 0.4)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <Briefcase size={22} color="var(--accent-primary)" />
+                </div>
                 <div>
                   <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#fff' }}>15+ Completed</h4>
                   <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '4px' }}>
@@ -211,10 +236,22 @@ const About: React.FC = () => {
                   borderRadius: '20px',
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '12px'
+                  gap: '16px'
                 }}
               >
-                <GraduationCap size={24} color="var(--accent-tertiary)" />
+                <div style={{
+                  width: '44px',
+                  height: '44px',
+                  borderRadius: '12px',
+                  background: 'var(--bg-deep)',
+                  boxShadow: 'var(--neu-inset)',
+                  border: '1px solid rgba(0, 0, 0, 0.4)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <GraduationCap size={22} color="var(--accent-tertiary)" />
+                </div>
                 <div>
                   <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#fff' }}>SE Student</h4>
                   <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '4px' }}>

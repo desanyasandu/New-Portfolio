@@ -22,9 +22,8 @@ const Footer: React.FC = () => {
     <footer
       style={{
         padding: '60px 0',
-        background: 'rgba(3, 4, 11, 0.6)',
-        backdropFilter: 'blur(20px)',
-        borderTop: '1px solid rgba(255,255,255,0.04)',
+        background: 'var(--bg-deep)',
+        borderTop: '1px solid var(--border-subtle)',
         position: 'relative',
         zIndex: 1
       }}
@@ -50,17 +49,13 @@ const Footer: React.FC = () => {
               href={portfolioData.socials.github}
               target="_blank"
               rel="noreferrer"
-              className="interactive glass"
+              className="neu-icon-btn interactive"
               style={{
                 width: '44px',
                 height: '44px',
-                borderRadius: '12px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'var(--text-secondary)',
-                border: '1px solid rgba(255,255,255,0.04)'
+                borderRadius: '12px'
               }}
+              aria-label="GitHub"
             >
               <Github size={18} />
             </a>
@@ -68,24 +63,20 @@ const Footer: React.FC = () => {
               href={portfolioData.socials.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="interactive glass"
+              className="neu-icon-btn interactive"
               style={{
                 width: '44px',
                 height: '44px',
-                borderRadius: '12px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'var(--text-secondary)',
-                border: '1px solid rgba(255,255,255,0.04)'
+                borderRadius: '12px'
               }}
+              aria-label="LinkedIn"
             >
               <Linkedin size={18} />
             </a>
           </div>
 
           {/* Separation Line */}
-          <div style={{ width: '100%', height: '1px', background: 'rgba(255, 255, 255, 0.04)' }} />
+          <div style={{ width: '100%', height: '1px', background: 'var(--border-subtle)' }} />
 
           {/* Bottom Row */}
           <div
@@ -107,20 +98,16 @@ const Footer: React.FC = () => {
             {/* Back To Top Button */}
             <button
               onClick={scrollToTop}
-              className="interactive glass"
+              className="neu-icon-btn interactive"
               style={{
-                background: 'rgba(255, 255, 255, 0.02)',
-                border: '1px solid rgba(255, 255, 255, 0.05)',
                 color: '#fff',
-                width: '40px',
-                height: '40px',
-                borderRadius: '10px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
+                width: '44px',
+                height: '44px',
+                borderRadius: '12px',
                 cursor: 'pointer'
               }}
               title="Scroll to Top"
+              aria-label="Scroll to Top"
             >
               <ArrowUp size={18} />
             </button>

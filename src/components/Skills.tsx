@@ -97,14 +97,14 @@ const Skills: React.FC = () => {
           }}
         >
           <div
-            className="glass"
             style={{
               display: 'flex',
               padding: '6px',
               borderRadius: '100px',
-              gap: '4px',
-              background: 'rgba(255, 255, 255, 0.01)',
-              border: '1px solid rgba(255, 255, 255, 0.05)'
+              gap: '6px',
+              background: 'var(--bg-deep)',
+              boxShadow: 'var(--neu-inset)',
+              border: '1px solid rgba(0, 0, 0, 0.4)'
             }}
           >
             {categories.map((cat) => (

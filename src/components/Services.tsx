@@ -112,13 +112,13 @@ const Services: React.FC = () => {
                   width: '64px',
                   height: '64px',
                   borderRadius: '18px',
-                  background: 'rgba(255, 255, 255, 0.02)',
-                  border: '1px solid rgba(255, 255, 255, 0.06)',
+                  background: 'var(--bg-deep)',
+                  border: '1px solid rgba(0, 0, 0, 0.4)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: service.color,
-                  boxShadow: `0 8px 24px rgba(0, 0, 0, 0.3)`
+                  boxShadow: 'var(--neu-inset)'
                 }}
               >
                 {service.icon}

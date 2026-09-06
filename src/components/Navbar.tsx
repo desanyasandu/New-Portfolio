@@ -93,8 +93,9 @@ const Navbar: React.FC = () => {
             justifyContent: 'space-between',
             padding: '0 2rem',
             borderRadius: '20px',
-            background: isScrolled ? 'rgba(3, 4, 11, 0.7)' : 'transparent',
-            border: isScrolled ? '1px solid rgba(255, 255, 255, 0.05)' : '1px solid transparent',
+            background: isScrolled ? 'var(--bg-surface)' : 'transparent',
+            border: isScrolled ? '1px solid var(--border-subtle)' : '1px solid transparent',
+            boxShadow: isScrolled ? 'var(--neu-card)' : 'none',
             transition: 'all 0.4s ease'
           }}
         >
@@ -155,34 +156,38 @@ const Navbar: React.FC = () => {
               href={portfolioData.socials.github}
               target="_blank"
               rel="noreferrer"
-              className="interactive"
-              style={{ color: 'var(--text-secondary)' }}
+              className="neu-icon-btn interactive"
+              style={{ width: '36px', height: '36px', borderRadius: '10px' }}
             >
-              <Github size={18} />
+              <Github size={17} />
             </a>
             <a
               href={portfolioData.socials.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="interactive"
-              style={{ color: 'var(--text-secondary)' }}
+              className="neu-icon-btn interactive"
+              style={{ width: '36px', height: '36px', borderRadius: '10px' }}
             >
-              <Linkedin size={18} />
+              <Linkedin size={17} />
             </a>
           </div>
+
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             style={{
               display: 'flex',
-              background: 'transparent',
-              border: 'none',
-              color: '#fff',
+              width: '40px',
+              height: '40px',
+              borderRadius: '10px',
+              alignItems: 'center',
+              justifyContent: 'center',
               cursor: 'pointer'
             }}
-            className="interactive mobile-toggle"
+            className="neu-icon-btn interactive mobile-toggle"
+            aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </nav>
@@ -207,9 +212,9 @@ const Navbar: React.FC = () => {
               padding: '2rem',
               gap: '1.5rem',
               borderRadius: '24px',
-              border: '1px solid rgba(255, 255, 255, 0.08)',
-              background: 'rgba(3, 4, 11, 0.95)',
-              boxShadow: '0 20px 40px rgba(0,0,0,0.8)'
+              border: '1px solid var(--border-subtle)',
+              background: 'var(--bg-surface)',
+              boxShadow: 'var(--neu-hover)'
             }}
           >
             {navLinks.map((link) => (

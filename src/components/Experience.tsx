@@ -104,13 +104,15 @@ const Experience: React.FC = () => {
         >
           {/* Education Column */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '40px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '40px' }}>
               <div
                 style={{
-                  width: '44px',
-                  height: '44px',
-                  borderRadius: '12px',
-                  background: 'rgba(34, 211, 238, 0.1)',
+                  width: '46px',
+                  height: '46px',
+                  borderRadius: '14px',
+                  background: 'var(--bg-deep)',
+                  boxShadow: 'var(--neu-inset)',
+                  border: '1px solid rgba(0, 0, 0, 0.4)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -134,8 +136,21 @@ const Experience: React.FC = () => {
                 >
                   <div className="timeline-dot" />
                   <div className="glass" style={{ padding: '28px', borderRadius: '20px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--accent-secondary)', fontSize: '0.85rem', fontWeight: 700, marginBottom: '12px' }}>
-                      <Calendar size={14} /> {item.year}
+                    <div style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      color: 'var(--accent-secondary)',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      marginBottom: '12px',
+                      padding: '4px 12px',
+                      borderRadius: '100px',
+                      background: 'var(--bg-deep)',
+                      boxShadow: 'var(--neu-inset)',
+                      border: '1px solid rgba(0, 0, 0, 0.3)'
+                    }}>
+                      <Calendar size={13} /> {item.year}
                     </div>
                     <h4 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>{item.title}</h4>
                     <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', display: 'block', marginBottom: '12px', fontWeight: 500 }}>{item.subtitle}</span>
@@ -148,13 +163,15 @@ const Experience: React.FC = () => {
 
           {/* Projects & Experience Column */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '40px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '40px' }}>
               <div
                 style={{
-                  width: '44px',
-                  height: '44px',
-                  borderRadius: '12px',
-                  background: 'rgba(168, 85, 247, 0.1)',
+                  width: '46px',
+                  height: '46px',
+                  borderRadius: '14px',
+                  background: 'var(--bg-deep)',
+                  boxShadow: 'var(--neu-inset)',
+                  border: '1px solid rgba(0, 0, 0, 0.4)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -167,16 +184,6 @@ const Experience: React.FC = () => {
             </div>
 
             <div className="timeline" style={{ position: 'relative' }}>
-              <div
-                style={{
-                  position: 'absolute',
-                  width: '2px',
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  top: 0,
-                  bottom: 0,
-                  left: '32px'
-                }}
-              />
               {projectsExperience.map((item, idx) => (
                 <motion.div
                   key={item.title}
@@ -186,10 +193,23 @@ const Experience: React.FC = () => {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="timeline-item"
                 >
-                  <div className="timeline-dot" style={{ borderColor: 'var(--accent-tertiary)', boxShadow: '0 0 12px var(--accent-tertiary)' }} />
+                  <div className="timeline-dot" style={{ borderColor: 'var(--accent-tertiary)', boxShadow: '4px 4px 10px rgba(0, 0, 0, 0.5), -3px -3px 8px rgba(255, 255, 255, 0.04), 0 0 12px var(--accent-tertiary)' }} />
                   <div className="glass" style={{ padding: '28px', borderRadius: '20px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--accent-tertiary)', fontSize: '0.85rem', fontWeight: 700, marginBottom: '12px' }}>
-                      <Calendar size={14} /> {item.year}
+                    <div style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      color: 'var(--accent-tertiary)',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      marginBottom: '12px',
+                      padding: '4px 12px',
+                      borderRadius: '100px',
+                      background: 'var(--bg-deep)',
+                      boxShadow: 'var(--neu-inset)',
+                      border: '1px solid rgba(0, 0, 0, 0.3)'
+                    }}>
+                      <Calendar size={13} /> {item.year}
                     </div>
                     <h4 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>{item.title}</h4>
                     <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', display: 'block', marginBottom: '12px', fontWeight: 500 }}>{item.subtitle}</span>
