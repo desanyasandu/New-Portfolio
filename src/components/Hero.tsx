@@ -100,43 +100,6 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            {/* Available for new projects pill */}
-            <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="shimmer-badge"
-              style={{ 
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '10px',
-                padding: '8px 16px',
-                borderRadius: '100px',
-                background: 'rgba(99, 102, 241, 0.1)',
-                border: '1px solid rgba(99, 102, 241, 0.2)',
-                marginBottom: '2rem'
-              }}
-            >
-              <span 
-                className="pulse-status"
-                style={{ 
-                  width: '8px', 
-                  height: '8px', 
-                  borderRadius: '50%', 
-                  background: 'var(--accent-secondary)',
-                  display: 'inline-block'
-                }}
-              />
-              <span style={{ 
-                fontSize: '0.85rem', 
-                color: 'var(--accent-secondary)', 
-                fontWeight: 600, 
-                letterSpacing: '1px', 
-                textTransform: 'uppercase'
-              }}>
-                Available for new projects
-              </span>
-            </motion.div>
 
             <h1
               style={{
