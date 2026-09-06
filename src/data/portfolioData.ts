@@ -14,18 +14,37 @@ export const portfolioData: PortfolioData = {
   projects: [
     {
       id: "7",
-      title: "Green Dairy Distribution & Production Management System",
-      description: "Designed and engineered an enterprise ERP platform managing real-time vehicle telemetry, raw material BOMs, milk collection ledgers, automated batch processing, and multi-outlet supply chain distribution.",
-      tech: ["Next.js", "React", "Prisma", "PostgreSQL", "Tailwind CSS", "Recharts"],
-      link: "https://github.com/desanyasandu/green-dairy-erp",
+      title: "Green Dairy — Enterprise Dairy Production & Intelligent Supply Chain Management System",
+      description: "Green Dairy — an end-to-end Enterprise Dairy Production & Intelligent Supply Chain Management System! 🥛🏭 Managing commercial dairy operations from rural raw milk procurement and multi-tier perishable batch production (BOM), to offline-first mobile lorry POS fleet distribution, multi-tender treasury, statutory HRMS payroll, and real-time observability.",
+      tech: [
+        "Next.js (App Router)",
+        "React 19",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma ORM",
+        "Capacitor (Android)",
+        "Dexie.js (IndexedDB)",
+        "HTML5-QRCode",
+        "Tailwind CSS",
+        "Radix UI",
+        "Lucide Icons",
+        "Recharts",
+        "JWT (Jose)",
+        "Bcrypt.js"
+      ],
+      link: "https://lnkd.in/p/gqFGNQ8u",
       github: "https://github.com/desanyasandu/green-dairy-erp",
       image: greenDairyErpImg,
       featured: true,
-      badge: "Featured Large-Scale System",
+      badge: "Featured Enterprise ERP & Mobile POS",
+      demoVideo: "https://www.linkedin.com/posts/iamdesan_excited-to-share-my-latest-engineering-ugcPost-7502410053220610049-ZuVr/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViZecBKVFcRFuYpEjym_KrLSIqLuI6t0Y",
       highlights: [
-        "Strict runtime schema validation via Zod & zero raw SQL queries via Prisma ORM",
-        "PostgreSQL connection pooling preventing connection exhaustion under peak batch syncs",
-        "Multi-outlet data isolation and secure Role-Based Access Control (RBAC)"
+        "🥛 Raw Milk Procurement & Farmer Ecosystem: Daily collection intake logging (volume, density, automated pricing), farmer advances with automated settlement deductions on payouts, and bulk milk outflow tracking.",
+        "🏭 Batch Production & Multi-Tier BOM Engine: Advanced Bill of Materials (BOM) linking raw milk & additives to finished goods (yogurt, pasteurized milk, curd), dynamic batch lifecycle (MFG/EXP) & real-time wastage tracking.",
+        "🚚 Fleet Distribution & Offline-First Mobile POS: Field sales app for distribution lorries with offline-first sync (Dexie.js / IndexedDB) for low-connectivity rural zones, live vehicle GPS telemetry, and barcode/QR dispatch.",
+        "💳 POS Terminal, Credit Control & Treasury: Multi-tender cashier POS (cash, credit, deferred cheque realization), two-tier credit approval workflows, and shop ledger debt aging management.",
+        "👥 HRMS & Statutory Payroll Engine: Biometric/daily attendance tracking, automated Sri Lankan statutory compliance engine (EPF 8%/12%, ETF 3%), and integrated payroll with commission & advance deductions.",
+        "🛡️ Enterprise Security & Observability: Dynamic RBAC with granular permissions, immutable audit logging, login telemetry (IP/device agents), and interactive Recharts executive dashboards."
       ]
     },
     {

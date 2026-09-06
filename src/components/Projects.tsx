@@ -22,6 +22,26 @@ interface VideoEmbedInfo {
 const resolveVideoEmbed = (url?: string): VideoEmbedInfo | null => {
   if (!url) return null;
 
+  // LinkedIn shortlink lnkd.in for Green Dairy
+  if (url.includes('lnkd.in/p/gqFGNQ8u') || url.includes('gqFGNQ8u')) {
+    return {
+      type: 'linkedin',
+      embedUrl: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7502410053220610049',
+      externalUrl: 'https://lnkd.in/p/gqFGNQ8u'
+    };
+  }
+
+  // LinkedIn ugcPost match
+  const linkedInUgcMatch = url.match(/ugcPost[-:]([0-9]+)/i);
+  if (url.includes('linkedin.com') && linkedInUgcMatch) {
+    const postId = linkedInUgcMatch[1];
+    return {
+      type: 'linkedin',
+      embedUrl: `https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:${postId}`,
+      externalUrl: url
+    };
+  }
+
   // LinkedIn activity post match
   const linkedInActivityMatch = url.match(/activity[-:]([0-9]+)/i) || url.match(/activity\/([0-9]+)/i);
   if (url.includes('linkedin.com') && linkedInActivityMatch) {
@@ -585,7 +605,7 @@ const Projects: React.FC = () => {
           if (index !== -1) {
             merged[index] = {
               ...merged[index],
-              link: fetchedProj.link || merged[index].link,
+              link: merged[index].link || fetchedProj.link,
               github: fetchedProj.github || merged[index].github
             };
           } else {
