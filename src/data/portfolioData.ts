@@ -2,6 +2,7 @@ import type { PortfolioData } from "../types/portfolio";
 import greenDairyErpImg from "../assets/green-dairy-erp.png";
 import nutrivisionImg from "../assets/nutrivision-ai.jpg";
 import ceylonStayImg from "../assets/ceylon-stay-nibm.png";
+import aquaflowImg from "../assets/aquaflow-meet-management.jpg";
 
 export const portfolioData: PortfolioData = {
   name: "Desan Yasandu",
@@ -64,6 +65,35 @@ export const portfolioData: PortfolioData = {
         "GitOps & Delivery: Automated builds and continuous deployments via ArgoCD & Helm Charts on Ubuntu Server",
         "API Governance & Security: WSO2 Asgardeo identity management & WSO2 Bijira API Gateway traffic lifecycle",
         "Event Messaging & Data: RabbitMQ queue handling, Python FastAPI, Redis caching, and PostgreSQL database"
+      ]
+    },
+    {
+      id: "aquaflow-meet-management",
+      title: "AquaFlow — Swimming & Athletics Meet Management System",
+      description: "AquaFlow (also featuring Athlete Prime) — an all-in-one, high-performance real-world sports administration platform engineered for competitive swimming and multi-sport meets. Features a zero-backend single-file SPA architecture, automated HY-TEK center-out lane seeding (6/8 lanes), multi-sheet Excel synchronization via SheetJS, offline-first IndexedDB persistence, live record tracking (MR, PR, NR), and official government & ministry print-ready merit reports.",
+      tech: [
+        "Vanilla JavaScript (ES6+)",
+        "IndexedDB (Offline-First)",
+        "SheetJS (Excel XLSX)",
+        "HY-TEK Lane Seeding",
+        "HTML5 Semantic SPA",
+        "CSS3 Glassmorphism",
+        "GSAP Animations",
+        "Lenis Smooth Scroll",
+        "Ionicons"
+      ],
+      link: "https://github.com/desanyasandu/Swimming-Meet-Management-Application--AquaFlow--",
+      github: "https://github.com/desanyasandu/Swimming-Meet-Management-Application--AquaFlow--",
+      image: aquaflowImg,
+      featured: true,
+      badge: "Featured Real-World Sports Meet System",
+      highlights: [
+        "🏊 HY-TEK Center-Out Lane Seeding: Automated multi-heat seeding and center-out lane assignments for 6-lane and 8-lane configurations ([4,5,3,6,2,7,1,8] / [3,4,2,5,1,6]) based on verified seed times.",
+        "⚡ Zero-Backend & Offline-First IndexedDB: Operates seamlessly in any browser without external servers or internet connectivity, featuring instant autosave, ACID state transactions, and robust schema upgrades.",
+        "📊 Bi-Directional SheetJS Excel Integration: Real-time bulk athlete enrollment parsing, automated event catalog mapping, and multi-sheet workbook generation for meet exports.",
+        "⏱️ Live Marshalling & Record Breaker Detection: Rapid keyboard-first result entry with automated detection and real-time flagging of broken Meet (MR), Provincial (PR), and National Records (NR).",
+        "🏆 Dynamic Championship Scoring: Automated team point tallies (Places 1-8 for individual & relay events), multi-age group brackets (U12–U20), and real-time school participation analytics.",
+        "🖨️ Official Ministry & HY-TEK Print Reports: Custom print media engine rendering high-density official government merit lists with NIC, admission IDs, and certificate generation tables."
       ]
     },
     {
