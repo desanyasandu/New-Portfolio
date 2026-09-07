@@ -31,6 +31,15 @@ const resolveVideoEmbed = (url?: string): VideoEmbedInfo | null => {
     };
   }
 
+  // LinkedIn shortlink lnkd.in for AquaFlow (Swimming Meet Management)
+  if (url.includes('lnkd.in/p/gsWr-QKX') || url.includes('gsWr-QKX')) {
+    return {
+      type: 'linkedin',
+      embedUrl: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7502615391215738881',
+      externalUrl: 'https://lnkd.in/p/gsWr-QKX'
+    };
+  }
+
   // LinkedIn ugcPost match
   const linkedInUgcMatch = url.match(/ugcPost[-:]([0-9]+)/i);
   if (url.includes('linkedin.com') && linkedInUgcMatch) {

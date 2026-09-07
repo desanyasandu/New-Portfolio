@@ -82,11 +82,12 @@ export const portfolioData: PortfolioData = {
         "Lenis Smooth Scroll",
         "Ionicons"
       ],
-      link: "https://github.com/desanyasandu/Swimming-Meet-Management-Application--AquaFlow--",
+      link: "https://lnkd.in/p/gsWr-QKX",
       github: "https://github.com/desanyasandu/Swimming-Meet-Management-Application--AquaFlow--",
       image: aquaflowImg,
       featured: true,
       badge: "Featured Real-World Sports Meet System",
+      demoVideo: "https://www.linkedin.com/posts/iamdesan_webdevelopment-javascript-frontend-ugcPost-7502615391215738881-_1Fa/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViZecBKVFcRFuYpEjym_KrLSIqLuI6t0Y",
       highlights: [
         "🏊 HY-TEK Center-Out Lane Seeding: Automated multi-heat seeding and center-out lane assignments for 6-lane and 8-lane configurations ([4,5,3,6,2,7,1,8] / [3,4,2,5,1,6]) based on verified seed times.",
         "⚡ Zero-Backend & Offline-First IndexedDB: Operates seamlessly in any browser without external servers or internet connectivity, featuring instant autosave, ACID state transactions, and robust schema upgrades.",
