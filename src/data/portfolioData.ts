@@ -3,6 +3,7 @@ import greenDairyErpImg from "../assets/green-dairy-erp.png";
 import nutrivisionImg from "../assets/nutrivision-ai.jpg";
 import ceylonStayImg from "../assets/ceylon-stay-nibm.png";
 import aquaflowImg from "../assets/aquaflow-meet-management.jpg";
+import codCodeIdeImg from "../assets/cod-code-ide.jpg";
 
 export const portfolioData: PortfolioData = {
   name: "Desan Yasandu",
@@ -99,16 +100,63 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "nutrivision-ai",
-      title: "Nutrivision AI - Dietary Health Assistant",
-      description: "An AI-powered mobile nutrition platform built with Flutter. Features real-time computer vision food scanning, calorie & macro tracking, disease risk estimation, digital health twin analytics, and interactive AI dietary coaching.",
-      tech: ["Flutter", "Dart", "Computer Vision", "AI Agents", "Provider", "REST APIs"],
-      link: "https://github.com/desanyasandu",
-      github: "https://github.com/desanyasandu",
+      title: "NutriVision AI — Computer Vision Nutrition & Preventive Health Ecosystem",
+      description: "NutriVision AI — a cutting-edge cross-platform mobile ecosystem built with Flutter and Computer Vision to eliminate manual nutrition tracking. Features instant camera & gallery meal scanning, deep macro & micronutrient breakdown, an interactive Digital Health Twin metabolic simulation, a 24/7 context-aware conversational AI coach, hands-free voice assistance, chronic disease risk predictive analysis, and medical dietary conflict alerts.",
+      tech: [
+        "Flutter",
+        "Dart",
+        "Computer Vision",
+        "Deep Learning",
+        "Provider",
+        "Digital Health Twin",
+        "Voice Assistant",
+        "REST APIs",
+        "Lucide Icons"
+      ],
+      link: "https://lnkd.in/p/gnWVs4ba",
+      github: "https://github.com/desanyasandu/Nutrivision-AI-Flutter",
       image: nutrivisionImg,
+      featured: true,
+      badge: "Featured AI Health & Vision Platform",
+      demoVideo: "https://www.linkedin.com/posts/iamdesan_flutter-ai-computervision-ugcPost-7502657475548966913-DXsX/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViZecBKVFcRFuYpEjym_KrLSIqLuI6t0Y",
       highlights: [
-        "Secure Edge API proxy architecture with zero client-side secret key leaks",
-        "Local caching layer reducing recurring Vision AI inference calls by 40%",
-        "Strict input validation preventing malicious prompt & payload injections"
+        "📸 AI-Powered Instant Food Recognition: Real-time camera & gallery meal scanning utilizing deep learning models with high confidence scoring, multi-item detection, and automatic macro calculations.",
+        "🔬 Deep Nutritional & Macro Breakdown: Instant precision computation of calories, protein, carbohydrates, fats, and fiber with daily goal calibration and visual macro distribution.",
+        "🧬 Digital Health Twin Simulation: Interactive biometric model simulating metabolic responses to dietary intake and forecasting long-term physiological wellness over time.",
+        "🤖 24/7 Context-Aware AI Coach & Voice Assistant: Conversational agent offering personalized dietary advice, meal swaps, and natural hands-free voice logging on the go.",
+        "🩺 Predictive Chronic Disease Risk Analysis: Dynamic risk assessment algorithms analyzing nutritional patterns for Prediabetes, Type 2 Diabetes, Cardiovascular health, and Hypertension.",
+        "⚠️ Disease Conflict & Dietary Checker: Dynamic safety engine alerting users of medical contraindications, dietary restrictions, and allergen cross-conflicts.",
+        "📋 Interactive Kanban Meal & Habit Planner: Visual pipeline organizing breakfast, lunch, and dinner workflows with habit and streak tracking."
+      ]
+    },
+    {
+      id: "cod-code-ide",
+      title: "Cod Code IDE — Real-Time Collaborative IDE & Streaming AI Pair-Programming Workspace",
+      description: "Cod Code IDE — an all-in-one collaborative cloud & desktop development environment engineered by Team Dark Code. Eliminates tool fragmentation by merging real-time multiplayer code editing (CRDTs via Yjs & WebSockets), embedded peer-to-peer voice huddles & screen sharing, a streaming AI Copilot state machine (Ready ➔ Thinking ➔ Typing), Monaco editor tabs, and integrated dynamic terminal execution into a unified, zero-latency workspace.",
+      tech: [
+        "React 19",
+        "TypeScript",
+        "Tauri (Rust)",
+        "Yjs (CRDT)",
+        "WebSockets",
+        "Monaco Editor",
+        "Tailwind CSS v4",
+        "Electron",
+        "Lucide Icons"
+      ],
+      link: "https://lnkd.in/p/gpGM3Ut9",
+      github: "https://github.com/desanyasandu/IDE",
+      image: codCodeIdeImg,
+      featured: true,
+      badge: "Featured Multiplayer IDE & AI Copilot",
+      demoVideo: "https://www.linkedin.com/posts/iamdesan_softwareengineering-webdevelopment-collaboration-ugcPost-7503463307295588352-tDWp/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViZecBKVFcRFuYpEjym_KrLSIqLuI6t0Y",
+      highlights: [
+        "👥 Conflict-Free Multiplayer CRDTs: Deterministic real-time live editing powered by Yjs, y-monaco, and WebSocket buffers with multi-peer presence, custom colored carets, and zero edit collision lag.",
+        "🎙️ Integrated Voice Huddles & Screen Sharing: Embedded low-latency peer-to-peer voice rooms and live screen broadcasts directly inside the IDE layout without external app switching.",
+        "🔮 Streaming AI Pair-Programming Copilot: Context-aware AI assistant with dynamic state transitions (Ready ➔ Thinking ➔ Typing), streaming word-by-word code generation, refactoring, and test generation.",
+        "💻 Monaco Multi-Tab Pro Workspace: High-performance code editor featuring customizable font sizing, Dark/Light modes, file explorer tree navigation, and breadcrumbs.",
+        "🖥️ Dynamic Terminal & Git Controls: Interactive command prompt supporting macOS, Linux, and Windows syntax with source control commit/push workflows.",
+        "🦀 Cross-Platform Hybrid Runtime: Runs high-speed in the browser and compiles into lightweight, memory-efficient native desktop binaries via Tauri (Rust) and Electron."
       ]
     },
     {

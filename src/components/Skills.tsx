@@ -128,7 +128,7 @@ const Skills: React.FC = () => {
             gap: '2.5rem'
           }}
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="popLayout">
             {filteredSkills.map((skill) => (
               <motion.div
                 key={skill.name}

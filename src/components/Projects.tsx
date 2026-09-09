@@ -40,6 +40,24 @@ const resolveVideoEmbed = (url?: string): VideoEmbedInfo | null => {
     };
   }
 
+  // LinkedIn shortlink lnkd.in for NutriVision AI
+  if (url.includes('lnkd.in/p/gnWVs4ba') || url.includes('gnWVs4ba')) {
+    return {
+      type: 'linkedin',
+      embedUrl: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7502657475548966913',
+      externalUrl: 'https://lnkd.in/p/gnWVs4ba'
+    };
+  }
+
+  // LinkedIn shortlink lnkd.in for Cod Code IDE
+  if (url.includes('lnkd.in/p/gpGM3Ut9') || url.includes('gpGM3Ut9')) {
+    return {
+      type: 'linkedin',
+      embedUrl: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7503463307295588352',
+      externalUrl: 'https://lnkd.in/p/gpGM3Ut9'
+    };
+  }
+
   // LinkedIn ugcPost match
   const linkedInUgcMatch = url.match(/ugcPost[-:]([0-9]+)/i);
   if (url.includes('linkedin.com') && linkedInUgcMatch) {
