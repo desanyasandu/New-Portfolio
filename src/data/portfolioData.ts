@@ -10,9 +10,9 @@ export const portfolioData: PortfolioData = {
   role: "Full-stack Developer",
   tagline: "Software Engineer | Creative Thinker | Problem Solver",
   about: "A dedicated software engineering student with a strong passion for coding, algorithms, and building efficient software solutions. My journey spans from system optimization scripts to full-stack microservices, always with a focus on clean, scalable code.",
-  profileImage: "/about-me.png",
+  profileImage: "/about-me.jpg",
   heroImage: "/hero-me.png",
-  aboutImage: "/about-me.png",
+  aboutImage: "/about-me.jpg",
   projects: [
     {
       id: "7",
