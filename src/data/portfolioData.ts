@@ -4,6 +4,7 @@ import nutrivisionImg from "../assets/nutrivision-ai.jpg";
 import ceylonStayImg from "../assets/ceylon-stay-nibm.png";
 import aquaflowImg from "../assets/aquaflow-meet-management.jpg";
 import codCodeIdeImg from "../assets/cod-code-ide.jpg";
+import theErpImg from "../assets/the-erp-system.jpg";
 
 export const portfolioData: PortfolioData = {
   name: "Desan Yasandu",
@@ -45,27 +46,7 @@ export const portfolioData: PortfolioData = {
         "🏭 Batch Production & Multi-Tier BOM Engine: Advanced Bill of Materials (BOM) linking raw milk & additives to finished goods (yogurt, pasteurized milk, curd), dynamic batch lifecycle (MFG/EXP) & real-time wastage tracking.",
         "🚚 Fleet Distribution & Offline-First Mobile POS: Field sales app for distribution lorries with offline-first sync (Dexie.js / IndexedDB) for low-connectivity rural zones, live vehicle GPS telemetry, and barcode/QR dispatch.",
         "💳 POS Terminal, Credit Control & Treasury: Multi-tender cashier POS (cash, credit, deferred cheque realization), two-tier credit approval workflows, and shop ledger debt aging management.",
-        "👥 HRMS & Statutory Payroll Engine: Biometric/daily attendance tracking, automated Sri Lankan statutory compliance engine (EPF 8%/12%, ETF 3%), and integrated payroll with commission & advance deductions.",
         "🛡️ Enterprise Security & Observability: Dynamic RBAC with granular permissions, immutable audit logging, login telemetry (IP/device agents), and interactive Recharts executive dashboards."
-      ]
-    },
-    {
-      id: "ceylon-stay-nibm",
-      title: "Diploma in Software Engineering at NIBM Final Project",
-      description: "Built our 1st year final project with a strong DevOps focus. A real-world deployable accommodation booking platform engineered with microservice architecture, automated GitOps delivery, container orchestration, and computer vision AI.",
-      tech: ["React Vite", "Python FastAPI", "Kubernetes", "Docker", "RabbitMQ", "YOLOv11n", "ArgoCD", "PostgreSQL", "Redis", "WSO2"],
-      link: "https://www.linkedin.com/posts/kushan-randika-herath-5a3b39352_diploma-in-software-engineering-at-nibm-final-activity-7448927464082501632-AAzH",
-      github: "https://github.com/desanyasandu/CEYLON-STAY-FRONT-END",
-      image: ceylonStayImg,
-      featured: true,
-      badge: "Featured NIBM Final Project",
-      demoVideo: "https://www.linkedin.com/posts/kushan-randika-herath-5a3b39352_diploma-in-software-engineering-at-nibm-final-activity-7448927464082501632-AAzH?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViZecBKVFcRFuYpEjym_KrLSIqLuI6t0Y",
-      highlights: [
-        "Microservices Architecture: Vanilla K8s orchestration, Docker containers & MetalLB load balancing",
-        "AI & Computer Vision: YOLOv11n pre-trained vision model for object detection with MinIO S3 storage",
-        "GitOps & Delivery: Automated builds and continuous deployments via ArgoCD & Helm Charts on Ubuntu Server",
-        "API Governance & Security: WSO2 Asgardeo identity management & WSO2 Bijira API Gateway traffic lifecycle",
-        "Event Messaging & Data: RabbitMQ queue handling, Python FastAPI, Redis caching, and PostgreSQL database"
       ]
     },
     {
@@ -160,84 +141,53 @@ export const portfolioData: PortfolioData = {
       ]
     },
     {
-      id: "8",
-      title: "CourseConnect Enterprise",
-      description: "An enterprise learning management platform (LMS) with secure course creation, interactive forums, progress tracking, checkout integrations, and dual OracleDB & MongoDB synchronization.",
-      tech: ["Next.js", "React", "OracleDB", "MongoDB", "Tailwind CSS"],
-      link: "https://github.com/desanyasandu/courseconnect-enterprise",
-      github: "https://github.com/desanyasandu/courseconnect-enterprise",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2000",
-      highlights: [
-        "Dual OracleDB & MongoDB synchronization with idempotent write pipelines",
-        "IDOR & unauthorized resource protection via strict server-side session checks",
-        "Optimized indexed pagination keeping dashboard read latency under 80ms"
-      ]
-    },
-    {
       id: "9",
-      title: "Raw Material & Inventory ERP",
-      description: "A warehouse and logistics tracking dashboard managing raw material shelf-lives, finished good batches, lorry inventory manifests, and driver petty cash ledger files.",
-      tech: ["Next.js", "React", "Prisma", "SQLite", "Tailwind CSS", "Recharts"],
-      link: "https://github.com/desanyasandu/ERP",
+      title: "TheERP (NexusERP) — Factory & Distribution Control Center",
+      description: "TheERP (NexusERP) — an end-to-end, bilingual (Sinhala & English) manufacturing and FMCG operations platform built with Next.js 14 and Prisma. Eliminates 'clipboard lag' and operational blindspots across physical factory floors by integrating real-time production batching (FIFO), lorry dispatch manifests with returns/unload reconciliation, double-entry financial ledgers, route petty cash recovery flows, and an 11-in-1 executive reports suite.",
+      tech: [
+        "Next.js 14 (App Router)",
+        "React 18",
+        "TypeScript",
+        "Prisma ORM",
+        "SQLite",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Recharts",
+        "Server Actions"
+      ],
+      link: "https://lnkd.in/p/gAFrM9uN",
       github: "https://github.com/desanyasandu/ERP",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000",
+      image: theErpImg,
+      featured: true,
+      badge: "Featured Factory & Distribution ERP",
+      demoVideo: "https://www.linkedin.com/posts/iamdesan_fullstack-nextjs-webdevelopment-ugcPost-7505283891100827648-MqKD/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViZecBKVFcRFuYpEjym_KrLSIqLuI6t0Y",
       highlights: [
-        "ACID-compliant inventory transaction ledgers preventing double-allocation anomalies",
-        "Least-privilege database user permissions for audit and operational safety"
+        "🏭 Production Control & FIFO Batching: Real-time queue scheduling, raw material chemical consumption tracking, and batch-wise expiry monitoring ensuring strict FIFO compliance.",
+        "🚚 Lorry Fleet & In-Transit Dispatch: Immutable transaction-driven dispatch manifest tracking with damaged goods handling, route cash collection, and returns/unload reconciliation.",
+        "📊 Executive Infographics Dashboard: Real-time factory KPI telemetry including active fleet status, stock valuation, regional sales distribution, and Recharts production trends.",
+        "💼 Double-Entry Financial Ledger Hub: Complete accounting suite with automated cash books, dynamic Profit & Loss (P&L) statements, cash flow analytics, and balance sheets.",
+        "🏢 Full Operations & Client Registers: Supermarket and retail grocer registry (Cargills, Keells), debtor/creditor aging schedules, and supplier contract monitoring.",
+        "📈 11-in-1 Reports Suite & Bilingual UI: Multi-tier reporting for finished goods, chemical stock, fixed assets, and bank loans with instant CSV export and full Sinhala/English localization."
       ]
     },
     {
-      id: "1",
-      title: "Smart Browser History Manager",
-      description: "A comprehensive tool for managing and analyzing browser history with advanced search and visualization capabilities.",
-      tech: ["TypeScript", "React", "State Management"],
-      link: "https://github.com/desanyasandu/SmartBrowserHistoryManager",
-      github: "https://github.com/desanyasandu/SmartBrowserHistoryManager",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
-    },
-    {
-      id: "2",
-      title: "Zoom Alternative",
-      description: "A real-time video conferencing prototype showcasing WebRTC integration and collaborative features.",
-      tech: ["TypeScript", "WebRTC", "Socket.io"],
-      link: "https://github.com/desanyasandu/Zoom-Alternative",
-      github: "https://github.com/desanyasandu/Zoom-Alternative",
-      image: "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=1974&auto=format&fit=crop",
+      id: "ceylon-stay-nibm",
+      title: "Diploma in Software Engineering at NIBM Final Project",
+      description: "Built our 1st year final project with a strong DevOps focus. A real-world deployable accommodation booking platform engineered with microservice architecture, automated GitOps delivery, container orchestration, and computer vision AI.",
+      tech: ["React Vite", "Python FastAPI", "Kubernetes", "Docker", "RabbitMQ", "YOLOv11n", "ArgoCD", "PostgreSQL", "Redis", "WSO2"],
+      link: "https://www.linkedin.com/posts/kushan-randika-herath-5a3b39352_diploma-in-software-engineering-at-nibm-final-activity-7448927464082501632-AAzH",
+      github: "https://github.com/desanyasandu/CEYLON-STAY-FRONT-END",
+      image: ceylonStayImg,
+      featured: true,
+      badge: "Featured NIBM Final Project",
+      demoVideo: "https://www.linkedin.com/posts/kushan-randika-herath-5a3b39352_diploma-in-software-engineering-at-nibm-final-activity-7448927464082501632-AAzH?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViZecBKVFcRFuYpEjym_KrLSIqLuI6t0Y",
       highlights: [
-        "Peer-to-peer WebRTC mesh signaling with room-scoped socket memory cleanup",
-        "Tokenized room handshakes preventing unauthorized cross-session joins"
+        "Microservices Architecture: Vanilla K8s orchestration, Docker containers & MetalLB load balancing",
+        "AI & Computer Vision: YOLOv11n pre-trained vision model for object detection with MinIO S3 storage",
+        "GitOps & Delivery: Automated builds and continuous deployments via ArgoCD & Helm Charts on Ubuntu Server",
+        "API Governance & Security: WSO2 Asgardeo identity management & WSO2 Bijira API Gateway traffic lifecycle",
+        "Event Messaging & Data: RabbitMQ queue handling, Python FastAPI, Redis caching, and PostgreSQL database"
       ]
-    },
-    {
-      id: "3",
-      title: "RAM-Cleaner Utility",
-      description: "Effortless Windows RAM optimization tool automated via batch scripting for peak performance.",
-      tech: ["Batch", "Shell", "Optimization"],
-      link: "https://github.com/desanyasandu/RAM-Cleaner---Windows-Batch-Script-Desan-Yasandu-",
-      github: "https://github.com/desanyasandu/RAM-Cleaner---Windows-Batch-Script-Desan-Yasandu-",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
-    },
-    {
-      id: "4",
-      title: "React SpringBoot MS",
-      description: "Full-stack microservices application demonstrating seamless integration between React and Spring Boot.",
-      tech: ["Java", "Spring Boot", "React", "REST API"],
-      link: "https://github.com/desanyasandu/React-SpringBoot-MS",
-      github: "https://github.com/desanyasandu/React-SpringBoot-MS",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
-      highlights: [
-        "Stateless JWT authentication with cross-service authorization boundaries",
-        "Strict DTO validation layer preventing broken object-level authorization (BOLA)"
-      ]
-    },
-    {
-      id: "5",
-      title: "Library API",
-      description: "Robust backend solution for library management featuring clean architecture and RESTful endpoints.",
-      tech: ["Java", "Spring Boot", "MySQL", "REST"],
-      link: "https://github.com/desanyasandu/Library-API",
-      github: "https://github.com/desanyasandu/Library-API",
-      image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2090&auto=format&fit=crop"
     }
   ],
   skills: [

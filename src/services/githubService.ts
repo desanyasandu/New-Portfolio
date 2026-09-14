@@ -12,6 +12,10 @@ const LANGUAGE_IMAGES: Record<string, string> = {
   default: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000"
 };
 
+const IGNORED_REPOS = [
+  "skills-copilot-codespaces-vscode",
+];
+
 export const fetchGithubProjects = async (): Promise<Project[]> => {
   try {
     const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=12`);
@@ -19,9 +23,9 @@ export const fetchGithubProjects = async (): Promise<Project[]> => {
     
     const repos = await response.json();
     
-    // Filter out forks and repositories without descriptions (usually small tests)
+    // Filter out forks, ignored repos, and repositories without descriptions
     return repos
-      .filter((repo: any) => !repo.fork && repo.description)
+      .filter((repo: any) => !repo.fork && repo.description && !IGNORED_REPOS.includes(repo.name.toLowerCase()))
       .map((repo: any) => ({
         id: repo.id.toString(),
         title: repo.name.replace(/-/g, ' '),

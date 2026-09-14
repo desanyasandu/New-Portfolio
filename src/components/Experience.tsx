@@ -32,22 +32,28 @@ const projectsExperience: TimelineItem[] = [
     description: 'Designed and engineered an enterprise ERP platform managing real-time vehicle telemetry, raw material BOMs, milk collection ledgers, automated batch processing, and multi-outlet supply chain distribution.'
   },
   {
-    year: '2024',
-    title: 'Smart Browser History Manager',
-    subtitle: 'Open Source Lead Developer',
-    description: 'Engineered a React & TypeScript visual dashboard utilizing custom history visualization, advanced data indexing, and indexing performance.'
+    year: '2025 - 2026',
+    title: 'TheERP (NexusERP) — Factory & Distribution Control Center',
+    subtitle: 'Full-Stack Next.js 14 & Prisma ERP Platform',
+    description: 'Engineered an end-to-end manufacturing and FMCG operations platform featuring real-time FIFO production batching, dispatch manifests, and double-entry financial ledgers.'
   },
   {
-    year: '2024',
-    title: 'Zoom Alternative & Collaboration App',
-    subtitle: 'Open Source Developer',
-    description: 'Built a real-time web video conferencing application using WebRTC, Socket.io, and Node.js backend integration.'
+    year: '2025',
+    title: 'Cod Code IDE & Streaming AI Pair-Programming Workspace',
+    subtitle: 'Collaborative Cloud & Desktop Environment',
+    description: 'Developed an all-in-one multiplayer IDE combining real-time CRDT code editing (Yjs), peer-to-peer voice huddles, Monaco editor tabs, and streaming AI copilot.'
   },
   {
-    year: '2023',
-    title: 'Windows System RAM-Cleaner Utility',
-    subtitle: 'Automation Lead',
-    description: 'Created an optimization system for Windows systems automated through shell scripting to maximize operational RAM performance.'
+    year: '2025',
+    title: 'NutriVision AI & Preventive Health Platform',
+    subtitle: 'Computer Vision Mobile Ecosystem',
+    description: 'Built a cross-platform Flutter mobile ecosystem featuring real-time food computer vision recognition, Digital Health Twin metabolic simulation, and context-aware AI coaching.'
+  },
+  {
+    year: '2025',
+    title: 'Ceylon Stay — NIBM Final Project',
+    subtitle: 'Microservices & GitOps Platform',
+    description: 'Engineered a deployable accommodation booking platform with Kubernetes orchestration, ArgoCD GitOps, RabbitMQ, and YOLOv11n computer vision.'
   }
 ];
 

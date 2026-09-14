@@ -58,6 +58,15 @@ const resolveVideoEmbed = (url?: string): VideoEmbedInfo | null => {
     };
   }
 
+  // LinkedIn shortlink lnkd.in for TheERP (NexusERP)
+  if (url.includes('lnkd.in/p/gAFrM9uN') || url.includes('gAFrM9uN')) {
+    return {
+      type: 'linkedin',
+      embedUrl: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7505283891100827648',
+      externalUrl: 'https://lnkd.in/p/gAFrM9uN'
+    };
+  }
+
   // LinkedIn ugcPost match
   const linkedInUgcMatch = url.match(/ugcPost[-:]([0-9]+)/i);
   if (url.includes('linkedin.com') && linkedInUgcMatch) {
