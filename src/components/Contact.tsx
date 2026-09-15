@@ -6,32 +6,77 @@ import { Mail, MapPin, Send } from 'lucide-react';
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [statusMessage, setStatusMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
     setIsSubmitting(true);
+    setStatusMessage(null);
 
-    const emailTo = portfolioData.socials.email || 'desanyasandu@gmail.com';
-    const emailSubject = encodeURIComponent(
-      formData.subject ? formData.subject : `Portfolio Message from ${formData.name}`
-    );
-    const emailBody = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
-    const mailtoUrl = `mailto:${emailTo}?subject=${emailSubject}&body=${emailBody}`;
+    if (!accessKey || accessKey === 'YOUR_ACCESS_KEY_HERE') {
+      // Fallback to mailto if access key is not yet configured
+      const emailTo = portfolioData.socials.email || 'desanyasandu@gmail.com';
+      const emailSubject = encodeURIComponent(
+        formData.subject ? formData.subject : `Portfolio Message from ${formData.name}`
+      );
+      const emailBody = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      );
+      window.location.href = `mailto:${emailTo}?subject=${emailSubject}&body=${emailBody}`;
 
-    setTimeout(() => {
       setIsSubmitting(false);
-      setSubmitSuccess(true);
-      window.location.href = mailtoUrl;
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setStatusMessage({
+        type: 'success',
+        text: 'Opening your email client to send message... (Configure VITE_WEB3FORMS_ACCESS_KEY in .env for direct sending)'
+      });
+      setTimeout(() => setStatusMessage(null), 6000);
+      return;
+    }
 
-      setTimeout(() => setSubmitSuccess(false), 5000);
-    }, 400);
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || `New message from ${formData.name} via Portfolio`,
+          message: formData.message,
+          from_name: 'Portfolio Contact Form'
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatusMessage({
+          type: 'success',
+          text: 'Thank you! Your message has been sent directly to my inbox.'
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setStatusMessage({
+          type: 'error',
+          text: result.message || 'Something went wrong. Please try again or email directly.'
+        });
+      }
+    } catch {
+      setStatusMessage({
+        type: 'error',
+        text: 'Network error. Please try again or reach out directly via email.'
+      });
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setStatusMessage(null), 6000);
+    }
   };
 
   return (
@@ -222,12 +267,12 @@ const Contact: React.FC = () => {
                   width: '100%',
                   padding: '1em 1.5em',
                   cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                  background: submitSuccess ? '#10b981' : undefined
+                  background: statusMessage?.type === 'success' ? '#10b981' : statusMessage?.type === 'error' ? '#ef4444' : undefined
                 }}
               >
                 {isSubmitting ? (
                   'Sending...'
-                ) : submitSuccess ? (
+                ) : statusMessage?.type === 'success' ? (
                   'Message Sent!'
                 ) : (
                   <>
@@ -237,20 +282,20 @@ const Contact: React.FC = () => {
               </button>
 
               <AnimatePresence>
-                {submitSuccess && (
+                {statusMessage && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
                     style={{
                       marginTop: '16px',
-                      color: '#10b981',
+                      color: statusMessage.type === 'success' ? '#10b981' : '#f87171',
                       fontSize: '0.9rem',
                       fontWeight: 600,
                       textAlign: 'center'
                     }}
                   >
-                    Thank you! Your message has been sent successfully.
+                    {statusMessage.text}
                   </motion.div>
                 )}
               </AnimatePresence>
