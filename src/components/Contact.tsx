@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
 
     const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
-    if (!accessKey || accessKey === 'be1f5655-68f4-4c3f-be68-c51d9cde8b72') {
+    if (!accessKey || accessKey === 'YOUR_ACCESS_KEY_HERE') {
       // Fallback to mailto if access key is not yet configured
       const emailTo = portfolioData.socials.email || 'desanyasandu@gmail.com';
       const emailSubject = encodeURIComponent(
