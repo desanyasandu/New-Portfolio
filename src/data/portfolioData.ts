@@ -13,12 +13,12 @@ export const portfolioData: PortfolioData = {
   about: "A dedicated software engineering student with a strong passion for coding, algorithms, and building efficient software solutions. My journey spans from system optimization scripts to full-stack microservices, always with a focus on clean, scalable code.",
   profileImage: "/about-me.jpg",
   heroImage: "/hero-me.png",
-  aboutImage: "/about-me.jpg",
+  aboutImage: "/about-portrait.jpg",
   projects: [
     {
       id: "7",
       title: "Green Dairy — Enterprise Dairy Production & Intelligent Supply Chain Management System",
-      description: "Green Dairy — an end-to-end Enterprise Dairy Production & Intelligent Supply Chain Management System! 🥛🏭 Managing commercial dairy operations from rural raw milk procurement and multi-tier perishable batch production (BOM), to offline-first mobile lorry POS fleet distribution, multi-tender treasury, statutory HRMS payroll, and real-time observability.",
+      description: "Green Dairy — an end-to-end Enterprise Dairy Production & Intelligent Supply Chain Management System! Managing commercial dairy operations from rural raw milk procurement and multi-tier perishable batch production (BOM), to offline-first mobile lorry POS fleet distribution, multi-tender treasury, statutory HRMS payroll, and real-time observability.",
       tech: [
         "Next.js (App Router)",
         "React 19",
@@ -42,11 +42,11 @@ export const portfolioData: PortfolioData = {
       badge: "Featured Enterprise ERP & Mobile POS",
       demoVideo: "https://www.linkedin.com/posts/iamdesan_excited-to-share-my-latest-engineering-ugcPost-7502410053220610049-ZuVr/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViZecBKVFcRFuYpEjym_KrLSIqLuI6t0Y",
       highlights: [
-        "🥛 Raw Milk Procurement & Farmer Ecosystem: Daily collection intake logging (volume, density, automated pricing), farmer advances with automated settlement deductions on payouts, and bulk milk outflow tracking.",
-        "🏭 Batch Production & Multi-Tier BOM Engine: Advanced Bill of Materials (BOM) linking raw milk & additives to finished goods (yogurt, pasteurized milk, curd), dynamic batch lifecycle (MFG/EXP) & real-time wastage tracking.",
-        "🚚 Fleet Distribution & Offline-First Mobile POS: Field sales app for distribution lorries with offline-first sync (Dexie.js / IndexedDB) for low-connectivity rural zones, live vehicle GPS telemetry, and barcode/QR dispatch.",
-        "💳 POS Terminal, Credit Control & Treasury: Multi-tender cashier POS (cash, credit, deferred cheque realization), two-tier credit approval workflows, and shop ledger debt aging management.",
-        "🛡️ Enterprise Security & Observability: Dynamic RBAC with granular permissions, immutable audit logging, login telemetry (IP/device agents), and interactive Recharts executive dashboards."
+        "Raw Milk Procurement & Farmer Ecosystem: Daily collection intake logging (volume, density, automated pricing), farmer advances with automated settlement deductions on payouts, and bulk milk outflow tracking.",
+        "Batch Production & Multi-Tier BOM Engine: Advanced Bill of Materials (BOM) linking raw milk & additives to finished goods (yogurt, pasteurized milk, curd), dynamic batch lifecycle (MFG/EXP) & real-time wastage tracking.",
+        "Fleet Distribution & Offline-First Mobile POS: Field sales app for distribution lorries with offline-first sync (Dexie.js / IndexedDB) for low-connectivity rural zones, live vehicle GPS telemetry, and barcode/QR dispatch.",
+        "POS Terminal, Credit Control & Treasury: Multi-tender cashier POS (cash, credit, deferred cheque realization), two-tier credit approval workflows, and shop ledger debt aging management.",
+        "Enterprise Security & Observability: Dynamic RBAC with granular permissions, immutable audit logging, login telemetry (IP/device agents), and interactive Recharts executive dashboards."
       ]
     },
     {
@@ -71,12 +71,12 @@ export const portfolioData: PortfolioData = {
       badge: "Featured Real-World Sports Meet System",
       demoVideo: "https://www.linkedin.com/posts/iamdesan_webdevelopment-javascript-frontend-ugcPost-7502615391215738881-_1Fa/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViZecBKVFcRFuYpEjym_KrLSIqLuI6t0Y",
       highlights: [
-        "🏊 HY-TEK Center-Out Lane Seeding: Automated multi-heat seeding and center-out lane assignments for 6-lane and 8-lane configurations ([4,5,3,6,2,7,1,8] / [3,4,2,5,1,6]) based on verified seed times.",
-        "⚡ Zero-Backend & Offline-First IndexedDB: Operates seamlessly in any browser without external servers or internet connectivity, featuring instant autosave, ACID state transactions, and robust schema upgrades.",
-        "📊 Bi-Directional SheetJS Excel Integration: Real-time bulk athlete enrollment parsing, automated event catalog mapping, and multi-sheet workbook generation for meet exports.",
-        "⏱️ Live Marshalling & Record Breaker Detection: Rapid keyboard-first result entry with automated detection and real-time flagging of broken Meet (MR), Provincial (PR), and National Records (NR).",
-        "🏆 Dynamic Championship Scoring: Automated team point tallies (Places 1-8 for individual & relay events), multi-age group brackets (U12–U20), and real-time school participation analytics.",
-        "🖨️ Official Ministry & HY-TEK Print Reports: Custom print media engine rendering high-density official government merit lists with NIC, admission IDs, and certificate generation tables."
+        "HY-TEK Center-Out Lane Seeding: Automated multi-heat seeding and center-out lane assignments for 6-lane and 8-lane configurations ([4,5,3,6,2,7,1,8] / [3,4,2,5,1,6]) based on verified seed times.",
+        "Zero-Backend & Offline-First IndexedDB: Operates seamlessly in any browser without external servers or internet connectivity, featuring instant autosave, ACID state transactions, and robust schema upgrades.",
+        "Bi-Directional SheetJS Excel Integration: Real-time bulk athlete enrollment parsing, automated event catalog mapping, and multi-sheet workbook generation for meet exports.",
+        "Live Marshalling & Record Breaker Detection: Rapid keyboard-first result entry with automated detection and real-time flagging of broken Meet (MR), Provincial (PR), and National Records (NR).",
+        "Dynamic Championship Scoring: Automated team point tallies (Places 1-8 for individual & relay events), multi-age group brackets (U12–U20), and real-time school participation analytics.",
+        "Official Ministry & HY-TEK Print Reports: Custom print media engine rendering high-density official government merit lists with NIC, admission IDs, and certificate generation tables."
       ]
     },
     {
@@ -101,13 +101,13 @@ export const portfolioData: PortfolioData = {
       badge: "Featured AI Health & Vision Platform",
       demoVideo: "https://www.linkedin.com/posts/iamdesan_flutter-ai-computervision-ugcPost-7502657475548966913-DXsX/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViZecBKVFcRFuYpEjym_KrLSIqLuI6t0Y",
       highlights: [
-        "📸 AI-Powered Instant Food Recognition: Real-time camera & gallery meal scanning utilizing deep learning models with high confidence scoring, multi-item detection, and automatic macro calculations.",
-        "🔬 Deep Nutritional & Macro Breakdown: Instant precision computation of calories, protein, carbohydrates, fats, and fiber with daily goal calibration and visual macro distribution.",
-        "🧬 Digital Health Twin Simulation: Interactive biometric model simulating metabolic responses to dietary intake and forecasting long-term physiological wellness over time.",
-        "🤖 24/7 Context-Aware AI Coach & Voice Assistant: Conversational agent offering personalized dietary advice, meal swaps, and natural hands-free voice logging on the go.",
-        "🩺 Predictive Chronic Disease Risk Analysis: Dynamic risk assessment algorithms analyzing nutritional patterns for Prediabetes, Type 2 Diabetes, Cardiovascular health, and Hypertension.",
-        "⚠️ Disease Conflict & Dietary Checker: Dynamic safety engine alerting users of medical contraindications, dietary restrictions, and allergen cross-conflicts.",
-        "📋 Interactive Kanban Meal & Habit Planner: Visual pipeline organizing breakfast, lunch, and dinner workflows with habit and streak tracking."
+        "AI-Powered Instant Food Recognition: Real-time camera & gallery meal scanning utilizing deep learning models with high confidence scoring, multi-item detection, and automatic macro calculations.",
+        "Deep Nutritional & Macro Breakdown: Instant precision computation of calories, protein, carbohydrates, fats, and fiber with daily goal calibration and visual macro distribution.",
+        "Digital Health Twin Simulation: Interactive biometric model simulating metabolic responses to dietary intake and forecasting long-term physiological wellness over time.",
+        "24/7 Context-Aware AI Coach & Voice Assistant: Conversational agent offering personalized dietary advice, meal swaps, and natural hands-free voice logging on the go.",
+        "Predictive Chronic Disease Risk Analysis: Dynamic risk assessment algorithms analyzing nutritional patterns for Prediabetes, Type 2 Diabetes, Cardiovascular health, and Hypertension.",
+        "Disease Conflict & Dietary Checker: Dynamic safety engine alerting users of medical contraindications, dietary restrictions, and allergen cross-conflicts.",
+        "Interactive Kanban Meal & Habit Planner: Visual pipeline organizing breakfast, lunch, and dinner workflows with habit and streak tracking."
       ]
     },
     {
@@ -132,12 +132,12 @@ export const portfolioData: PortfolioData = {
       badge: "Featured Multiplayer IDE & AI Copilot",
       demoVideo: "https://www.linkedin.com/posts/iamdesan_softwareengineering-webdevelopment-collaboration-ugcPost-7503463307295588352-tDWp/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViZecBKVFcRFuYpEjym_KrLSIqLuI6t0Y",
       highlights: [
-        "👥 Conflict-Free Multiplayer CRDTs: Deterministic real-time live editing powered by Yjs, y-monaco, and WebSocket buffers with multi-peer presence, custom colored carets, and zero edit collision lag.",
-        "🎙️ Integrated Voice Huddles & Screen Sharing: Embedded low-latency peer-to-peer voice rooms and live screen broadcasts directly inside the IDE layout without external app switching.",
-        "🔮 Streaming AI Pair-Programming Copilot: Context-aware AI assistant with dynamic state transitions (Ready ➔ Thinking ➔ Typing), streaming word-by-word code generation, refactoring, and test generation.",
-        "💻 Monaco Multi-Tab Pro Workspace: High-performance code editor featuring customizable font sizing, Dark/Light modes, file explorer tree navigation, and breadcrumbs.",
-        "🖥️ Dynamic Terminal & Git Controls: Interactive command prompt supporting macOS, Linux, and Windows syntax with source control commit/push workflows.",
-        "🦀 Cross-Platform Hybrid Runtime: Runs high-speed in the browser and compiles into lightweight, memory-efficient native desktop binaries via Tauri (Rust) and Electron."
+        "Conflict-Free Multiplayer CRDTs: Deterministic real-time live editing powered by Yjs, y-monaco, and WebSocket buffers with multi-peer presence, custom colored carets, and zero edit collision lag.",
+        "Integrated Voice Huddles & Screen Sharing: Embedded low-latency peer-to-peer voice rooms and live screen broadcasts directly inside the IDE layout without external app switching.",
+        "Streaming AI Pair-Programming Copilot: Context-aware AI assistant with dynamic state transitions (Ready ➔ Thinking ➔ Typing), streaming word-by-word code generation, refactoring, and test generation.",
+        "Monaco Multi-Tab Pro Workspace: High-performance code editor featuring customizable font sizing, Dark/Light modes, file explorer tree navigation, and breadcrumbs.",
+        "Dynamic Terminal & Git Controls: Interactive command prompt supporting macOS, Linux, and Windows syntax with source control commit/push workflows.",
+        "Cross-Platform Hybrid Runtime: Runs high-speed in the browser and compiles into lightweight, memory-efficient native desktop binaries via Tauri (Rust) and Electron."
       ]
     },
     {
@@ -162,12 +162,12 @@ export const portfolioData: PortfolioData = {
       badge: "Featured Factory & Distribution ERP",
       demoVideo: "https://www.linkedin.com/posts/iamdesan_fullstack-nextjs-webdevelopment-ugcPost-7505283891100827648-MqKD/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFViZecBKVFcRFuYpEjym_KrLSIqLuI6t0Y",
       highlights: [
-        "🏭 Production Control & FIFO Batching: Real-time queue scheduling, raw material chemical consumption tracking, and batch-wise expiry monitoring ensuring strict FIFO compliance.",
-        "🚚 Lorry Fleet & In-Transit Dispatch: Immutable transaction-driven dispatch manifest tracking with damaged goods handling, route cash collection, and returns/unload reconciliation.",
-        "📊 Executive Infographics Dashboard: Real-time factory KPI telemetry including active fleet status, stock valuation, regional sales distribution, and Recharts production trends.",
-        "💼 Double-Entry Financial Ledger Hub: Complete accounting suite with automated cash books, dynamic Profit & Loss (P&L) statements, cash flow analytics, and balance sheets.",
-        "🏢 Full Operations & Client Registers: Supermarket and retail grocer registry (Cargills, Keells), debtor/creditor aging schedules, and supplier contract monitoring.",
-        "📈 11-in-1 Reports Suite & Bilingual UI: Multi-tier reporting for finished goods, chemical stock, fixed assets, and bank loans with instant CSV export and full Sinhala/English localization."
+        "Production Control & FIFO Batching: Real-time queue scheduling, raw material chemical consumption tracking, and batch-wise expiry monitoring ensuring strict FIFO compliance.",
+        "Lorry Fleet & In-Transit Dispatch: Immutable transaction-driven dispatch manifest tracking with damaged goods handling, route cash collection, and returns/unload reconciliation.",
+        "Executive Infographics Dashboard: Real-time factory KPI telemetry including active fleet status, stock valuation, regional sales distribution, and Recharts production trends.",
+        "Double-Entry Financial Ledger Hub: Complete accounting suite with automated cash books, dynamic Profit & Loss (P&L) statements, cash flow analytics, and balance sheets.",
+        "Full Operations & Client Registers: Supermarket and retail grocer registry (Cargills, Keells), debtor/creditor aging schedules, and supplier contract monitoring.",
+        "11-in-1 Reports Suite & Bilingual UI: Multi-tier reporting for finished goods, chemical stock, fixed assets, and bank loans with instant CSV export and full Sinhala/English localization."
       ]
     },
     {
