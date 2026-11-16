@@ -5,6 +5,8 @@ import ceylonStayImg from "../assets/ceylon-stay-nibm.png";
 import aquaflowImg from "../assets/aquaflow-meet-management.jpg";
 import codCodeIdeImg from "../assets/cod-code-ide.jpg";
 import theErpImg from "../assets/the-erp-system.jpg";
+import gscCampusErpImg from "../assets/gsc-campus-erp.jpg";
+import maskAndMakerImg from "../assets/mask-and-maker.jpg";
 
 export const portfolioData: PortfolioData = {
   name: "Desan Yasandu",
@@ -15,6 +17,86 @@ export const portfolioData: PortfolioData = {
   heroImage: "/hero-me.png",
   aboutImage: "/about-portrait.jpg",
   projects: [
+    {
+      id: "gsc-campus-erp",
+      title: "Global Stanford Campus — University & Educational Institute Management System",
+      description: "A full-stack University / Educational Institute Management System for Global Stanford Campus (GSC), designed and built from scratch, entirely on my own. An all-in-one ERP-style platform covering every module from database to UI: student records, fees, finance, learning, admissions CRM, HR, inventory, documents and a public CMS website, with role-based portals for admins, lecturers, students and staff. One person, nine modules, end to end.",
+      tech: [
+        "Next.js 16 (App Router)",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS v4",
+        "Next.js Route Handlers (REST)",
+        "PostgreSQL (pg)",
+        "Supabase",
+        "Prisma ORM",
+        "SQLite (node:sqlite)",
+        "Puppeteer (PDF)",
+        "Python & Node.js Scripts",
+        "Lucide React",
+        "Lenis",
+        "ESLint 9"
+      ],
+      link: "https://lnkd.in/p/gYGp-JD5",
+      github: "",
+      image: gscCampusErpImg,
+      featured: true,
+      badge: "Featured Solo-Built University ERP & LMS",
+      demoVideo: "https://www.linkedin.com/posts/iamdesan_nextjs-react-typescript-ugcPost-7527761835945672704-MRLm/",
+      highlights: [
+        "Student & Fees Management: Admissions, enrollments and student records, with fee structures, payments and payment-slip handling.",
+        "Finance & Inventory Management: Institute-wide finance tracking alongside a dedicated inventory module.",
+        "LMS (Learning Management): Courses, PIN-based attendance, discussions and similarity checks on submitted work.",
+        "CRM & HR Management: Admissions call-intake and lead tracking, plus staff and lecturer management.",
+        "Document Management: Auto-generated enrollment letters, completion letters and student lists, rendered to PDF with Puppeteer.",
+        "CMS & Public Website: Programmes, faculty, branches, certifications, FAQs and news, all managed from the admin portal.",
+        "Role-Based Portals & Security: Separate portals for admins, lecturers, students and staff, with authentication, access control and audit logs.",
+        "Data Migration & Deployment: Python and Node.js scripts for migration, seeding and Excel data extraction; SQLite for the demo, PostgreSQL + Supabase in production."
+      ]
+    },
+    {
+      id: "mask-and-maker",
+      title: "Mask & Maker (M&M) — Digital Heritage & Ethical E-Commerce Platform",
+      description: "Mask & Maker empowers Sri Lanka's traditional mask-making artisans in Ambalangoda by combining centuries-old craftsmanship with Web3, AR and global commerce. Middlemen take 40–60% of artisans' margins, cheap counterfeits dilute genuine hand-carved Kaduru masks, and many master carvers have no digital or payment tools to reach global buyers. Built as a team project with Kushan Randika Herath and Harsha Herath.",
+      tech: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Framer Motion",
+        "Three.js",
+        "React Three Fiber",
+        "model-viewer (WebXR)",
+        "NestJS",
+        "GraphQL",
+        "PostgreSQL",
+        "Prisma ORM",
+        "Redis",
+        "Polygon",
+        "Solidity",
+        "IPFS (Pinata)",
+        "Stripe & PayHere",
+        "Kubernetes (K3s)",
+        "ArgoCD",
+        "AWS",
+        "Figma"
+      ],
+      link: "https://lnkd.in/p/guGENjye",
+      github: "https://github.com/desanyasandu/mask-and-maker-frontend",
+      image: maskAndMakerImg,
+      featured: true,
+      badge: "Featured Web3 Heritage & AR Commerce Platform",
+      demoVideo: "https://www.linkedin.com/posts/iamdesan_softwareengineering-nextjs-typescript-ugcPost-7527620452849131520-mZJf/",
+      highlights: [
+        "Artisan Portfolios & Digital Lineage: A profile for every master carver and workshop, tracing each mask back to the hands that made it.",
+        "Blockchain Provenance: Polygon certificates (Solidity ERC-721/1155, metadata on IPFS via Pinata) tied to each mask through NFC/QR tags, verifiable from any phone.",
+        "WebAR Wall Try-On: Place a mask on your own wall with Google model-viewer (WebXR / ARCore / ARKit), no app install; LiDAR and photogrammetry models in glTF/USDZ with Draco compression.",
+        "Folklore Hub: The stories behind the Raksha, Sanni and Kolam traditions, presented alongside the masks themselves.",
+        "Commerce, Auth & Shipping: NextAuth.js / Supabase Auth with RBAC, Stripe and PayHere payments, DHL/FedEx shipping APIs and Meilisearch/Algolia search over a NestJS REST + GraphQL backend.",
+        "Cloud & DevOps: AWS with K3s/Kubernetes, Docker, Helm and ArgoCD GitOps, GitHub Actions CI/CD, Vercel and Cloudflare CDN/R2."
+      ]
+    },
     {
       id: "7",
       title: "Green Dairy — Enterprise Dairy Production & Intelligent Supply Chain Management System",

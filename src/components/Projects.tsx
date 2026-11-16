@@ -178,7 +178,7 @@ const Projects: React.FC = () => {
           <h2 id="projects-title">Projects</h2>
           <p>
             Systems I designed and built end to end, from offline-first field apps to
-            collaborative tooling. Each one has a short demo and the source on GitHub.
+            collaborative tooling. Each one comes with a short demo walkthrough.
           </p>
         </header>
 
